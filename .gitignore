@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+*.sqlite3
+
+.idea/
+
+/build
+/dist
+/*.egg-info
+/docs/_build
