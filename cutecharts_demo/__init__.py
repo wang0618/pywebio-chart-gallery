@@ -26,6 +26,9 @@ def show_demo(name):
     clear_after('demo-start')
     all_demos[name]()
 
+    put_html('<a href="https://github.com/wang0618/pywebio-chart-gallery/blob/master'
+             '/cutecharts_demo/demos/example_%s.py" target="_blank">源码</a>' % name.lower())
+
 
 def cutecharts():
     set_auto_scroll_bottom(False)
