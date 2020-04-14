@@ -1,0 +1,134 @@
+
+<script>
+    require.config({
+        paths: {
+            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'china':'https://assets.pyecharts.org/assets/maps/china'
+        }
+    });
+</script>
+
+        <div id="e7a761d07c8c4493bf4d320f94632925" style="width:100%; height:500px;"></div>
+
+<script>
+        require(['echarts', 'china'], function(echarts) {
+                var chart_e7a761d07c8c4493bf4d320f94632925 = echarts.init(
+                    document.getElementById('e7a761d07c8c4493bf4d320f94632925'), 'white', {renderer: 'canvas'});
+                var option_e7a761d07c8c4493bf4d320f94632925 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u5546\u5bb6A",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "china",
+            "data": [
+                {
+                    "name": "\u5e7f\u4e1c",
+                    "value": 120
+                },
+                {
+                    "name": "\u5317\u4eac",
+                    "value": 31
+                },
+                {
+                    "name": "\u4e0a\u6d77",
+                    "value": 87
+                },
+                {
+                    "name": "\u6c5f\u897f",
+                    "value": 69
+                },
+                {
+                    "name": "\u6e56\u5357",
+                    "value": 41
+                },
+                {
+                    "name": "\u6d59\u6c5f",
+                    "value": 76
+                },
+                {
+                    "name": "\u6c5f\u82cf",
+                    "value": 113
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": true,
+            "emphasis": {}
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5546\u5bb6A"
+            ],
+            "selected": {
+                "\u5546\u5bb6A": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "Map-\u57fa\u672c\u793a\u4f8b",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+                chart_e7a761d07c8c4493bf4d320f94632925.setOption(option_e7a761d07c8c4493bf4d320f94632925);
+        });
+    </script>

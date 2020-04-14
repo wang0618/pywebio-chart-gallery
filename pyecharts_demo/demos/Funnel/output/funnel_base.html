@@ -1,0 +1,143 @@
+
+<script>
+    require.config({
+        paths: {
+            'echarts':'https://assets.pyecharts.org/assets/echarts.min'
+        }
+    });
+</script>
+
+        <div id="d4c883a2f1774a789306a1370895ebec" style="width:100%; height:500px;"></div>
+
+<script>
+        require(['echarts'], function(echarts) {
+                var chart_d4c883a2f1774a789306a1370895ebec = echarts.init(
+                    document.getElementById('d4c883a2f1774a789306a1370895ebec'), 'white', {renderer: 'canvas'});
+                var option_d4c883a2f1774a789306a1370895ebec = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "funnel",
+            "name": "\u5546\u54c1",
+            "data": [
+                {
+                    "name": "\u5c0f\u7c73",
+                    "value": 40
+                },
+                {
+                    "name": "\u4e09\u661f",
+                    "value": 145
+                },
+                {
+                    "name": "\u534e\u4e3a",
+                    "value": 122
+                },
+                {
+                    "name": "\u82f9\u679c",
+                    "value": 81
+                },
+                {
+                    "name": "\u9b45\u65cf",
+                    "value": 44
+                },
+                {
+                    "name": "VIVO",
+                    "value": 143
+                },
+                {
+                    "name": "OPPO",
+                    "value": 33
+                }
+            ],
+            "sort": "descending",
+            "gap": 0,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "OPPO",
+                "\u5c0f\u7c73",
+                "\u82f9\u679c",
+                "\u4e09\u661f",
+                "\u534e\u4e3a",
+                "VIVO",
+                "\u9b45\u65cf"
+            ],
+            "selected": {
+                "\u5c0f\u7c73": true,
+                "\u4e09\u661f": true,
+                "\u534e\u4e3a": true,
+                "\u82f9\u679c": true,
+                "\u9b45\u65cf": true,
+                "VIVO": true,
+                "OPPO": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "Funnel-\u57fa\u672c\u793a\u4f8b",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+                chart_d4c883a2f1774a789306a1370895ebec.setOption(option_d4c883a2f1774a789306a1370895ebec);
+        });
+    </script>

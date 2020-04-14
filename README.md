@@ -14,9 +14,6 @@ PyWebIO 支持使用第三方库进行数据可视化
 ### 启动全部demo
 
 ```bash
-git clone https://github.com/wang0618/pywebio-chart-gallery.git
-cd pywebio-chart-gallery
-python3 pyecharts_demo/build_demos.py
 python3 run.py
 ```
 
@@ -38,3 +35,10 @@ python3 -m cutecharts_demo
 **启动mpld3 demo**
 
 > todo
+
+### 同步 [pyecharts-gallery](https://github.com/pyecharts/pyecharts-gallery)
+
+```bash
+git submodule init
+python3 pyecharts_demo/build_demos.py
+```
