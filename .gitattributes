@@ -1,4 +1,4 @@
 # https://github.com/github/linguist#overrides
 
-# pyecharts_demo/pyecharts-gallery 是通过 python3 pyecharts_demo/build_demos.py 构建出来的
-pyecharts_demo/pyecharts-gallery/* linguist-generated
+# pyecharts_demo/demos 是通过 python3 pyecharts_demo/build_demos.py 构建出来的
+pyecharts_demo/demos/* linguist-generated
