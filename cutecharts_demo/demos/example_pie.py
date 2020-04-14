@@ -7,14 +7,14 @@ from pywebio.output import put_html
 
 
 def pie_base() -> Pie:
-    chart = Pie("Pie-基本示例")
+    chart = Pie("Pie-基本示例", width="100%")
     chart.set_options(labels=Faker.choose())
     chart.add_series(Faker.values())
     return chart
 
 
 def pie_legend_font():
-    chart = Pie("Pie-Legend")
+    chart = Pie("Pie-Legend", width="100%")
     chart.set_options(
         labels=Faker.choose(),
         legend_pos="upRight",
@@ -25,7 +25,7 @@ def pie_legend_font():
 
 
 def pie_radius():
-    chart = Pie("Pie-Radius")
+    chart = Pie("Pie-Radius", width="100%")
     chart.set_options(labels=Faker.choose(), inner_radius=0)
     chart.add_series(Faker.values())
     return chart

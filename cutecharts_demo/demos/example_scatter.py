@@ -7,7 +7,7 @@ from pywebio.output import put_html
 
 
 def scatter_base() -> Scatter:
-    chart = Scatter("Scatter-基本示例")
+    chart = Scatter("Scatter-基本示例", width="100%")
     chart.set_options(x_label="I'm xlabel", y_label="I'm ylabel")
     chart.add_series(
         "series-A", [(z[0], z[1]) for z in zip(Faker.values(), Faker.values())]
@@ -19,7 +19,7 @@ def scatter_base() -> Scatter:
 
 
 def scatter_dotsize_tickcount():
-    chart = Scatter("Scatter-散点大小")
+    chart = Scatter("Scatter-散点大小", width="100%")
     chart.set_options(dot_size=2, y_tick_count=8)
     chart.add_series(
         "series-A", [(z[0], z[1]) for z in zip(Faker.values(), Faker.values())]
@@ -31,7 +31,7 @@ def scatter_dotsize_tickcount():
 
 
 def scatter_show_line():
-    chart = Scatter("Scatter-散点连成线")
+    chart = Scatter("Scatter-散点连成线", width="100%")
     chart.set_options(y_tick_count=8, is_show_line=True)
     chart.add_series(
         "series-A", [(z[0], z[1]) for z in zip(Faker.values(), Faker.values())]

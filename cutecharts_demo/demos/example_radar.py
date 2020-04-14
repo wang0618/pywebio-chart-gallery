@@ -7,7 +7,7 @@ from pywebio.output import put_html
 
 
 def radar_base() -> Radar:
-    chart = Radar("Radar-基本示例")
+    chart = Radar("Radar-基本示例", width="100%")
     chart.set_options(labels=Faker.choose())
     chart.add_series("series-A", Faker.values())
     chart.add_series("series-B", Faker.values())
@@ -15,7 +15,7 @@ def radar_base() -> Radar:
 
 
 def radar_legend_colors():
-    chart = Radar("Radar-颜色调整")
+    chart = Radar("Radar-颜色调整", width="100%")
     chart.set_options(labels=Faker.choose(), colors=Faker.colors, legend_pos="upRight")
     chart.add_series("series-A", Faker.values())
     chart.add_series("series-B", Faker.values())
