@@ -12,14 +12,15 @@ src_path = path.join(path.dirname(__file__), "demos")
 all_demos = OrderedDict(json.load(open(path.join(path.dirname(__file__), 'inventory.json'))))
 
 
+def show_code(btn, code, after):
+    remove('code')
+    # todo 检测open调用，提供文件链接
+    put_code(code, 'python', after=after, anchor='code')
+
+
 def show_demo(name):
     if name not in all_demos:
         return
-
-    def show_code(btn, code, after):
-        remove('code')
-        # todo 检测open调用，提供文件链接
-        put_code(code, 'python', after=after, anchor='code')
 
     clear_after('content_start')
     base_dir = path.join(src_path, name)
