@@ -6,6 +6,7 @@ pyecharts_src_path = path.join(path.dirname(path.abspath(__file__)), "pyecharts-
 sys.path.insert(0, pyecharts_src_path)
 from run_all import ChartModelDict
 
+import json
 from util import migrate_code
 import logging
 from shutil import copyfile
@@ -81,8 +82,16 @@ def make_pyecharts(output_dir, tmp_file):
 
 
 if __name__ == '__main__':
-    output_dir = path.join(path.dirname(path.abspath(__file__)), "demo")
+    file_dir = path.dirname(path.abspath(__file__))
+
+    # 保存demo列表
+    inventory_file = path.join(file_dir, 'inventory.json')
+    json.dump(list(ChartModelDict.items()), open(inventory_file, 'w'), indent=4, ensure_ascii=False)
+
+    output_dir = path.join(file_dir, "demo")
+    # 清空旧demo文件
     os.system(f"rm -rf {output_dir}/*")
+
     tmp_file = path.join(output_dir, '_tmp.py')
     try:
         make_pyecharts(output_dir, tmp_file)

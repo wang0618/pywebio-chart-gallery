@@ -1,21 +1,18 @@
-import sys
+import os
+from collections import OrderedDict
+from functools import partial
 from os import path
 
-pyecharts_src_path = path.join(path.dirname(__file__), "pyecharts-gallery")
-sys.path.insert(0, pyecharts_src_path)
-
-from pywebio.output import *
-from functools import partial
 import pywebio
-from run_all import ChartModelDict
-
-import os
+from pywebio.output import *
 
 src_path = path.join(path.dirname(__file__), "demos")
 
+all_demos = OrderedDict(json.load(open(path.join(path.dirname(__file__), 'inventory.json'))))
+
 
 def show_demo(name):
-    if name not in ChartModelDict:
+    if name not in all_demos:
         return
 
     def show_code(btn, code, after):
@@ -59,7 +56,7 @@ def pyecharts():
     ## Demos List
     """, strip_indent=4)
 
-    put_buttons([(v, k) for k, v in ChartModelDict.items()], onclick=show_demo)
+    put_buttons([(v, k) for k, v in all_demos.items()], onclick=show_demo)
 
     set_anchor('content_start')
 
