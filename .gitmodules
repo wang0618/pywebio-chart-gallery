@@ -1,3 +1,4 @@
-[submodule "pyecharts-gallery"]
+
+[submodule "pyecharts_demo/pyecharts-gallery"]
 	path = pyecharts_demo/pyecharts-gallery
-	url = git@github.com:pyecharts/pyecharts-gallery.git
+	url = https://github.com/pyecharts/pyecharts-gallery.git
