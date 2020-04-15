@@ -1,2 +1,3 @@
-pywebio
+git+https://github.com/wang0618/PyWebIO.git@master#egg=pywebio
 cutecharts
+pyecharts
