@@ -4,12 +4,19 @@
 
 本项目展示了在 PyWebIO 使用以下图表库的方式：
 
- - [pyecharts](https://github.com/pyecharts/pyecharts): 创建Echarts图表 [demos](https://pywebio-charts.herokuapp.com/?pywebio_api=pyecharts)
- - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [demos](https://pywebio-charts.herokuapp.com/?pywebio_api=cutecharts)
+ - [pyecharts](https://github.com/pyecharts/pyecharts): 创建Echarts图表 [**demos**](https://pywebio-charts.herokuapp.com/?pywebio_api=pyecharts)
+ - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [**demos**](https://pywebio-charts.herokuapp.com/?pywebio_api=cutecharts)
  - [mpld3](https://mpld3.github.io/): todo...
 
+## Charts Snapshot
+### Pyecharts
+![pyecharts](./assets/pyecharts.gif)
 
-## Run
+### Cutecharts.py
+![cutecharts](./assets/cutecharts.png)
+
+
+## Run Demo
 
 ### 启动全部demo
 
