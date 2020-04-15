@@ -18,6 +18,9 @@ def index():
     readme = open(readme_file).read()
 
     readme = re.sub(r"\[demos\]\(.*?\?pywebio_api=(.+?)\)", r"[demos](./?pywebio_api=\g<1>)", readme)
+    cdn = r"https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master"
+    readme = re.sub(r"!\[(.+?)\]\(.*?(.+?)\)", r"![\g<1>](%s\g<2>)" % cdn, readme)
+    readme = re.sub(r"<div></div>[\s\S]*$", "", readme)
 
     put_markdown(readme)
 

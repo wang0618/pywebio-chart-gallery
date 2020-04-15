@@ -10,11 +10,12 @@
 
 ## Charts Snapshot
 ### Pyecharts
-![pyecharts](./assets/pyecharts.gif)
+![pyecharts](/assets/pyecharts.gif)
 
 ### Cutecharts.py
-![cutecharts](./assets/cutecharts.png)
+![cutecharts](/assets/cutecharts.png)
 
+<div></div>
 
 ## Run Demo
 
