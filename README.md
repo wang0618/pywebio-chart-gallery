@@ -1,11 +1,11 @@
 # [PyWebIO Chart Gallery](https://github.com/wang0618/pywebio-chart-gallery)
 
-PyWebIO 支持使用第三方库进行数据可视化
+[PyWebIO](https://github.com/wang0618/PyWebIO) 支持使用第三方库进行数据可视化
 
 本项目展示了在 PyWebIO 使用以下图表库的方式：
 
- - [pyecharts](https://github.com/pyecharts/pyecharts): 创建Echarts图表 [demos](todo/?pywebio_api=pyecharts)
- - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [demos](todo/?pywebio_api=cutecharts)
+ - [pyecharts](https://github.com/pyecharts/pyecharts): 创建Echarts图表 [demos](https://pywebio-charts.herokuapp.com/?pywebio_api=pyecharts)
+ - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [demos](https://pywebio-charts.herokuapp.com/?pywebio_api=cutecharts)
  - [mpld3](https://mpld3.github.io/): todo...
 
 
