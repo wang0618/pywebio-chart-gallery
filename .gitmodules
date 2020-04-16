@@ -2,3 +2,6 @@
 [submodule "pyecharts_demo/pyecharts-gallery"]
 	path = pyecharts_demo/pyecharts-gallery
 	url = https://github.com/pyecharts/pyecharts-gallery.git
+[submodule "plotly_demo/plotly"]
+	path = plotly_demo/plotly
+	url = https://github.com/plotly/plotly.py.git
