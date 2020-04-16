@@ -2,3 +2,4 @@
 
 # pyecharts_demo/demos 是通过 python3 pyecharts_demo/build_demos.py 构建出来的
 pyecharts_demo/demos/* linguist-generated
+plotly_demo/demos/* linguist-generated
