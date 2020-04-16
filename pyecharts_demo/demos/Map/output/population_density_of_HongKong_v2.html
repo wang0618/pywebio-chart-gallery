@@ -2,18 +2,18 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', '香港':'https://assets.pyecharts.org/assets/maps/xianggang'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', '香港':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/xianggang'
         }
     });
 </script>
 
-        <div id="0a4270d601a849f78ca726d9dbcb7df8" style="width:100%; height:500px;"></div>
+        <div id="a6b2c9f28ca84c20ba0abfb18a9553af" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', '香港'], function(echarts) {
-                var chart_0a4270d601a849f78ca726d9dbcb7df8 = echarts.init(
-                    document.getElementById('0a4270d601a849f78ca726d9dbcb7df8'), 'white', {renderer: 'canvas'});
-                var option_0a4270d601a849f78ca726d9dbcb7df8 = {
+                var chart_a6b2c9f28ca84c20ba0abfb18a9553af = echarts.init(
+                    document.getElementById('a6b2c9f28ca84c20ba0abfb18a9553af'), 'white', {renderer: 'canvas'});
+                var option_a6b2c9f28ca84c20ba0abfb18a9553af = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -221,6 +221,6 @@
         "borderWidth": 0
     }
 };
-                chart_0a4270d601a849f78ca726d9dbcb7df8.setOption(option_0a4270d601a849f78ca726d9dbcb7df8);
+                chart_a6b2c9f28ca84c20ba0abfb18a9553af.setOption(option_a6b2c9f28ca84c20ba0abfb18a9553af);
         });
     </script>

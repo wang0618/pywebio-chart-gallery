@@ -2,18 +2,18 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'world':'https://assets.pyecharts.org/assets/maps/world'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'world':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/world'
         }
     });
 </script>
 
-        <div id="2d50f2c41712426dab156bc207a8d6be" style="width:100%; height:500px;"></div>
+        <div id="757c8554e07041a197a7920c55197bbb" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'world'], function(echarts) {
-                var chart_2d50f2c41712426dab156bc207a8d6be = echarts.init(
-                    document.getElementById('2d50f2c41712426dab156bc207a8d6be'), 'white', {renderer: 'canvas'});
-                var option_2d50f2c41712426dab156bc207a8d6be = {
+                var chart_757c8554e07041a197a7920c55197bbb = echarts.init(
+                    document.getElementById('757c8554e07041a197a7920c55197bbb'), 'white', {renderer: 'canvas'});
+                var option_757c8554e07041a197a7920c55197bbb = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -61,31 +61,31 @@
             "data": [
                 {
                     "name": "China",
-                    "value": 47
+                    "value": 22
                 },
                 {
                     "name": "Canada",
-                    "value": 24
+                    "value": 38
                 },
                 {
                     "name": "Brazil",
-                    "value": 42
+                    "value": 98
                 },
                 {
                     "name": "Russia",
-                    "value": 105
+                    "value": 53
                 },
                 {
                     "name": "United States",
-                    "value": 109
+                    "value": 58
                 },
                 {
                     "name": "Africa",
-                    "value": 108
+                    "value": 143
                 },
                 {
                     "name": "Germany",
-                    "value": 26
+                    "value": 123
                 }
             ],
             "roam": true,
@@ -156,6 +156,6 @@
         "borderWidth": 0
     }
 };
-                chart_2d50f2c41712426dab156bc207a8d6be.setOption(option_2d50f2c41712426dab156bc207a8d6be);
+                chart_757c8554e07041a197a7920c55197bbb.setOption(option_757c8554e07041a197a7920c55197bbb);
         });
     </script>

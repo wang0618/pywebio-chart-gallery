@@ -14,11 +14,18 @@ from shutil import copyfile
 inject_code = r"""
 import sys
 from pyecharts.charts.base import Base
-from pyecharts.components import Image,Table
-from pyecharts.charts import Page,Tab
+from pyecharts.components import Image, Table
+from pyecharts.charts import Page, Tab
+from collections import Iterable
+from pyecharts.globals import CurrentConfig
+
+CurrentConfig.ONLINE_HOST = "https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/"
+
 
 def render(self, path: str = "render.html", template_name: str = "simple_chart.html", *args, **kwargs):
-    self.width = "100%"
+    charts = self if isinstance(self, Iterable) else (self,)
+    for chart in charts:
+        chart.width = "100%"
     html = self.render_notebook().__html__()
     open(sys.argv[1], 'w').write(html)
     
@@ -61,7 +68,7 @@ def process_dir(src_dir, target_dir, tmp_file):
         status = os.system("python3 %s %s" % (tmp_file, html_path))
         if int(status) != 0:
             print(f"Error in get output of {file}")
-        if not path.exists(html_path):
+        if not path.isfile(html_path):
             print(f"Error in make output of {file}")
 
 
@@ -88,7 +95,7 @@ if __name__ == '__main__':
     inventory_file = path.join(file_dir, 'inventory.json')
     json.dump(list(ChartModelDict.items()), open(inventory_file, 'w'), indent=4, ensure_ascii=False)
 
-    output_dir = path.join(file_dir, "demo")
+    output_dir = path.join(file_dir, "demos")
     # 清空旧demo文件
     os.system(f"rm -rf {output_dir}/*")
 

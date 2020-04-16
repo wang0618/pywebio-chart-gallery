@@ -2,18 +2,18 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'echarts-gl':'https://assets.pyecharts.org/assets/echarts-gl.min', 'china':'https://assets.pyecharts.org/assets/maps/china'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'echarts-gl':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts-gl.min', 'china':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/china'
         }
     });
 </script>
 
-        <div id="eea2b6c71f654bafab86cd8343691133" style="width:100%; height:500px;"></div>
+        <div id="f36ae771bd85474b87e28be7ce9de80b" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'echarts-gl', 'china'], function(echarts) {
-                var chart_eea2b6c71f654bafab86cd8343691133 = echarts.init(
-                    document.getElementById('eea2b6c71f654bafab86cd8343691133'), 'white', {renderer: 'canvas'});
-                var option_eea2b6c71f654bafab86cd8343691133 = {
+                var chart_f36ae771bd85474b87e28be7ce9de80b = echarts.init(
+                    document.getElementById('f36ae771bd85474b87e28be7ce9de80b'), 'white', {renderer: 'canvas'});
+                var option_f36ae771bd85474b87e28be7ce9de80b = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -393,6 +393,6 @@
         }
     ]
 };
-                chart_eea2b6c71f654bafab86cd8343691133.setOption(option_eea2b6c71f654bafab86cd8343691133);
+                chart_f36ae771bd85474b87e28be7ce9de80b.setOption(option_f36ae771bd85474b87e28be7ce9de80b);
         });
     </script>

@@ -2,7 +2,7 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min'
         }
     });
 </script>
@@ -39,22 +39,22 @@
         }
     </style>
 <div class="tab">
-            <button class="tablinks" onclick="showChart(event, '64965a06c54e41be8d35b3f79698ad6c')">bar-example</button>
-            <button class="tablinks" onclick="showChart(event, 'd0b9c61193224a63848b94bab9c32daf')">line-example</button>
-            <button class="tablinks" onclick="showChart(event, '1a52f8b5d72b40e7a355a82fddbde863')">pie-example</button>
-            <button class="tablinks" onclick="showChart(event, '24ea5d1a62744423bf4c997f526e4719')">grid-example</button>
+            <button class="tablinks" onclick="showChart(event, '755874948af348c481b03c384670cfe2')">bar-example</button>
+            <button class="tablinks" onclick="showChart(event, 'e1ed6a434f1740869f163083f1714086')">line-example</button>
+            <button class="tablinks" onclick="showChart(event, '512abdc8f1f4440db27c61d4cfd44b07')">pie-example</button>
+            <button class="tablinks" onclick="showChart(event, 'dfeee636d18d4ba3a95dc47f137ce66e')">grid-example</button>
     </div>
 
-        <div id="64965a06c54e41be8d35b3f79698ad6c" class="chart-container" style="width:900px; height:500px;"></div>
-        <div id="d0b9c61193224a63848b94bab9c32daf" class="chart-container" style="width:900px; height:500px;"></div>
-        <div id="1a52f8b5d72b40e7a355a82fddbde863" class="chart-container" style="width:900px; height:500px;"></div>
-        <div id="24ea5d1a62744423bf4c997f526e4719" class="chart-container" style="width:900px; height:500px;"></div>
+        <div id="755874948af348c481b03c384670cfe2" class="chart-container" style="width:100%; height:500px;"></div>
+        <div id="e1ed6a434f1740869f163083f1714086" class="chart-container" style="width:100%; height:500px;"></div>
+        <div id="512abdc8f1f4440db27c61d4cfd44b07" class="chart-container" style="width:100%; height:500px;"></div>
+        <div id="dfeee636d18d4ba3a95dc47f137ce66e" class="chart-container" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts'], function(echarts) {
-                var chart_64965a06c54e41be8d35b3f79698ad6c = echarts.init(
-                    document.getElementById('64965a06c54e41be8d35b3f79698ad6c'), 'white', {renderer: 'canvas'});
-                var option_64965a06c54e41be8d35b3f79698ad6c = {
+                var chart_755874948af348c481b03c384670cfe2 = echarts.init(
+                    document.getElementById('755874948af348c481b03c384670cfe2'), 'white', {renderer: 'canvas'});
+                var option_755874948af348c481b03c384670cfe2 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -94,36 +94,36 @@
             "type": "bar",
             "name": "\u5546\u5bb6A",
             "data": [
-                6,
-                2,
-                19,
-                26,
+                13,
+                29,
+                25,
+                25,
                 1,
                 6,
-                25,
-                23,
-                5,
-                12,
-                9,
-                5,
-                15,
+                16,
+                1,
+                2,
+                20,
                 14,
-                23,
-                22,
-                11,
-                5,
+                16,
+                12,
+                17,
+                14,
+                16,
                 25,
-                4,
-                9,
-                13,
-                8,
-                11,
-                8,
-                23,
-                8,
-                11,
+                3,
+                20,
+                27,
                 15,
-                15
+                7,
+                13,
+                17,
+                30,
+                21,
+                17,
+                9,
+                28,
+                3
             ],
             "barCategoryGap": "20%",
             "label": {
@@ -257,10 +257,10 @@
         }
     ]
 };
-                chart_64965a06c54e41be8d35b3f79698ad6c.setOption(option_64965a06c54e41be8d35b3f79698ad6c);
-                var chart_d0b9c61193224a63848b94bab9c32daf = echarts.init(
-                    document.getElementById('d0b9c61193224a63848b94bab9c32daf'), 'white', {renderer: 'canvas'});
-                var option_d0b9c61193224a63848b94bab9c32daf = {
+                chart_755874948af348c481b03c384670cfe2.setOption(option_755874948af348c481b03c384670cfe2);
+                var chart_e1ed6a434f1740869f163083f1714086 = echarts.init(
+                    document.getElementById('e1ed6a434f1740869f163083f1714086'), 'white', {renderer: 'canvas'});
+                var option_e1ed6a434f1740869f163083f1714086 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -306,32 +306,32 @@
             "step": false,
             "data": [
                 [
-                    "\u5468\u4e00",
-                    112
+                    "\u886c\u886b",
+                    125
                 ],
                 [
-                    "\u5468\u4e8c",
-                    44
+                    "\u6bdb\u8863",
+                    134
                 ],
                 [
-                    "\u5468\u4e09",
-                    57
+                    "\u9886\u5e26",
+                    117
                 ],
                 [
-                    "\u5468\u56db",
-                    41
+                    "\u88e4\u5b50",
+                    79
                 ],
                 [
-                    "\u5468\u4e94",
-                    80
+                    "\u98ce\u8863",
+                    96
                 ],
                 [
-                    "\u5468\u516d",
-                    94
+                    "\u9ad8\u8ddf\u978b",
+                    33
                 ],
                 [
-                    "\u5468\u65e5",
-                    94
+                    "\u889c\u5b50",
+                    125
                 ]
             ],
             "hoverAnimation": true,
@@ -376,32 +376,32 @@
             "step": false,
             "data": [
                 [
-                    "\u5468\u4e00",
-                    48
+                    "\u886c\u886b",
+                    145
                 ],
                 [
-                    "\u5468\u4e8c",
-                    124
+                    "\u6bdb\u8863",
+                    79
                 ],
                 [
-                    "\u5468\u4e09",
-                    36
+                    "\u9886\u5e26",
+                    73
                 ],
                 [
-                    "\u5468\u56db",
-                    116
+                    "\u88e4\u5b50",
+                    56
                 ],
                 [
-                    "\u5468\u4e94",
-                    129
+                    "\u98ce\u8863",
+                    40
                 ],
                 [
-                    "\u5468\u516d",
-                    61
+                    "\u9ad8\u8ddf\u978b",
+                    142
                 ],
                 [
-                    "\u5468\u65e5",
-                    131
+                    "\u889c\u5b50",
+                    72
                 ]
             ],
             "hoverAnimation": true,
@@ -488,13 +488,13 @@
                 }
             },
             "data": [
-                "\u5468\u4e00",
-                "\u5468\u4e8c",
-                "\u5468\u4e09",
-                "\u5468\u56db",
-                "\u5468\u4e94",
-                "\u5468\u516d",
-                "\u5468\u65e5"
+                "\u886c\u886b",
+                "\u6bdb\u8863",
+                "\u9886\u5e26",
+                "\u88e4\u5b50",
+                "\u98ce\u8863",
+                "\u9ad8\u8ddf\u978b",
+                "\u889c\u5b50"
             ]
         }
     ],
@@ -529,10 +529,10 @@
         }
     ]
 };
-                chart_d0b9c61193224a63848b94bab9c32daf.setOption(option_d0b9c61193224a63848b94bab9c32daf);
-                var chart_1a52f8b5d72b40e7a355a82fddbde863 = echarts.init(
-                    document.getElementById('1a52f8b5d72b40e7a355a82fddbde863'), 'white', {renderer: 'canvas'});
-                var option_1a52f8b5d72b40e7a355a82fddbde863 = {
+                chart_e1ed6a434f1740869f163083f1714086.setOption(option_e1ed6a434f1740869f163083f1714086);
+                var chart_512abdc8f1f4440db27c61d4cfd44b07 = echarts.init(
+                    document.getElementById('512abdc8f1f4440db27c61d4cfd44b07'), 'white', {renderer: 'canvas'});
+                var option_512abdc8f1f4440db27c61d4cfd44b07 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -574,31 +574,31 @@
             "data": [
                 {
                     "name": "\u54c8\u58eb\u5947",
-                    "value": 94
+                    "value": 124
                 },
                 {
                     "name": "\u8428\u6469\u8036",
-                    "value": 108
+                    "value": 118
                 },
                 {
                     "name": "\u6cf0\u8fea",
-                    "value": 56
+                    "value": 75
                 },
                 {
                     "name": "\u91d1\u6bdb",
-                    "value": 42
+                    "value": 149
                 },
                 {
                     "name": "\u7267\u7f8a\u72ac",
-                    "value": 115
+                    "value": 102
                 },
                 {
                     "name": "\u5409\u5a03\u5a03",
-                    "value": 83
+                    "value": 34
                 },
                 {
                     "name": "\u67ef\u57fa",
-                    "value": 103
+                    "value": 132
                 }
             ],
             "radius": [
@@ -622,31 +622,31 @@
             "data": [
                 {
                     "name": "\u54c8\u58eb\u5947",
-                    "value": 21
+                    "value": 145
                 },
                 {
                     "name": "\u8428\u6469\u8036",
-                    "value": 123
+                    "value": 131
                 },
                 {
                     "name": "\u6cf0\u8fea",
-                    "value": 146
+                    "value": 76
                 },
                 {
                     "name": "\u91d1\u6bdb",
-                    "value": 85
+                    "value": 37
                 },
                 {
                     "name": "\u7267\u7f8a\u72ac",
-                    "value": 42
+                    "value": 71
                 },
                 {
                     "name": "\u5409\u5a03\u5a03",
-                    "value": 148
+                    "value": 49
                 },
                 {
                     "name": "\u67ef\u57fa",
-                    "value": 131
+                    "value": 133
                 }
             ],
             "radius": [
@@ -704,10 +704,10 @@
         }
     ]
 };
-                chart_1a52f8b5d72b40e7a355a82fddbde863.setOption(option_1a52f8b5d72b40e7a355a82fddbde863);
-                var chart_24ea5d1a62744423bf4c997f526e4719 = echarts.init(
-                    document.getElementById('24ea5d1a62744423bf4c997f526e4719'), 'white', {renderer: 'canvas'});
-                var option_24ea5d1a62744423bf4c997f526e4719 = {
+                chart_512abdc8f1f4440db27c61d4cfd44b07.setOption(option_512abdc8f1f4440db27c61d4cfd44b07);
+                var chart_dfeee636d18d4ba3a95dc47f137ce66e = echarts.init(
+                    document.getElementById('dfeee636d18d4ba3a95dc47f137ce66e'), 'white', {renderer: 'canvas'});
+                var option_dfeee636d18d4ba3a95dc47f137ce66e = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1092,7 +1092,7 @@
         }
     ]
 };
-                chart_24ea5d1a62744423bf4c997f526e4719.setOption(option_24ea5d1a62744423bf4c997f526e4719);
+                chart_dfeee636d18d4ba3a95dc47f137ce66e.setOption(option_dfeee636d18d4ba3a95dc47f137ce66e);
         });
     </script>
 <script>

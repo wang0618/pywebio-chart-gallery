@@ -1,20 +1,20 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'echarts-gl':'https://assets.pyecharts.org/assets/echarts-gl.min', 'china':'https://assets.pyecharts.org/assets/maps/china', 'world':'https://assets.pyecharts.org/assets/maps/world'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'echarts-gl':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts-gl.min', 'china':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/china', 'world':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/world'
         }
     });
 </script>
 
-    <div id="9753b874876747fd929d790ea375b916" style="width:100%; height:500px;"></div>
+    <div id="a93683d432b949a682fa8e0189eb73ae" style="width:100%; height:500px;"></div>
 
 
 <script>
     require(['echarts', 'echarts-gl', 'china', 'world'], function(echarts) {
-		var canvas_9753b874876747fd929d790ea375b916 = document.createElement('canvas');
-        var mapChart_9753b874876747fd929d790ea375b916 = echarts.init(
-	    canvas_9753b874876747fd929d790ea375b916, 'white', {width: 4096, height: 2048, renderer: 'canvas'});
-        var mapOption_9753b874876747fd929d790ea375b916 = {
+		var canvas_a93683d432b949a682fa8e0189eb73ae = document.createElement('canvas');
+        var mapChart_a93683d432b949a682fa8e0189eb73ae = echarts.init(
+	    canvas_a93683d432b949a682fa8e0189eb73ae, 'white', {width: 4096, height: 2048, renderer: 'canvas'});
+        var mapOption_a93683d432b949a682fa8e0189eb73ae = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1058,13 +1058,13 @@
         }
     ]
 };
-        mapChart_9753b874876747fd929d790ea375b916.setOption(mapOption_9753b874876747fd929d790ea375b916);
-    	var chart_9753b874876747fd929d790ea375b916 = echarts.init(
-            document.getElementById('9753b874876747fd929d790ea375b916'), 'white', {renderer: 'canvas'});
-	    var option_9753b874876747fd929d790ea375b916 = {
+        mapChart_a93683d432b949a682fa8e0189eb73ae.setOption(mapOption_a93683d432b949a682fa8e0189eb73ae);
+    	var chart_a93683d432b949a682fa8e0189eb73ae = echarts.init(
+            document.getElementById('a93683d432b949a682fa8e0189eb73ae'), 'white', {renderer: 'canvas'});
+	    var option_a93683d432b949a682fa8e0189eb73ae = {
            "globe": {
            "show": true,
-		   "baseTexture": mapChart_9753b874876747fd929d790ea375b916,
+		   "baseTexture": mapChart_a93683d432b949a682fa8e0189eb73ae,
            shading: 'lambert',
             light: {
                 ambient: {
@@ -1076,6 +1076,6 @@
              }
 
 		   }};
-        chart_9753b874876747fd929d790ea375b916.setOption(option_9753b874876747fd929d790ea375b916);
+        chart_a93683d432b949a682fa8e0189eb73ae.setOption(option_a93683d432b949a682fa8e0189eb73ae);
     });
 </script>

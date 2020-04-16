@@ -2,18 +2,18 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'china':'https://assets.pyecharts.org/assets/maps/china'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'china':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/china'
         }
     });
 </script>
 
-        <div id="145b69e09ef94235b7e8d700a145bdf6" style="width:100%; height:500px;"></div>
+        <div id="5b38b4f44a514d7b821cd92e0c3b4a6a" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'china'], function(echarts) {
-                var chart_145b69e09ef94235b7e8d700a145bdf6 = echarts.init(
-                    document.getElementById('145b69e09ef94235b7e8d700a145bdf6'), 'white', {renderer: 'canvas'});
-                var option_145b69e09ef94235b7e8d700a145bdf6 = {
+                var chart_5b38b4f44a514d7b821cd92e0c3b4a6a = echarts.init(
+                    document.getElementById('5b38b4f44a514d7b821cd92e0c3b4a6a'), 'white', {renderer: 'canvas'});
+                var option_5b38b4f44a514d7b821cd92e0c3b4a6a = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -242,6 +242,6 @@
         "emphasis": {}
     }
 };
-                chart_145b69e09ef94235b7e8d700a145bdf6.setOption(option_145b69e09ef94235b7e8d700a145bdf6);
+                chart_5b38b4f44a514d7b821cd92e0c3b4a6a.setOption(option_5b38b4f44a514d7b821cd92e0c3b4a6a);
         });
     </script>

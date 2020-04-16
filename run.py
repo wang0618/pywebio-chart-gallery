@@ -8,16 +8,17 @@ from tornado.options import define, options
 from cutecharts_demo import cutecharts
 from pyecharts_demo import pyecharts
 from pywebio import STATIC_PATH
-from pywebio.output import put_markdown, set_auto_scroll_bottom
+from pywebio.output import put_markdown, set_auto_scroll_bottom, set_title
 from pywebio.platform.tornado import webio_handler
 
 
 def index():
+    set_title("PyWebIO Chart Gallery")
     set_auto_scroll_bottom(False)
     readme_file = path.join(path.dirname(__file__), "README.md")
     readme = open(readme_file).read()
 
-    readme = re.sub(r"\[\*\*demos\*\*\]\(.*?\?pywebio_api=(.+?)\)", r"[demos](./?pywebio_api=\g<1>)", readme)
+    readme = re.sub(r"\[\*\*demos\*\*\]\(.*?\?pywebio_api=(.+?)\)", r"[**demos**](./?pywebio_api=\g<1>)", readme)
     cdn = r"https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master"
     readme = re.sub(r"!\[(.+?)\]\(.*?(.+?)\)", r"![\g<1>](%s\g<2>)" % cdn, readme)
     readme = re.sub(r"<div></div>[\s\S]*$", "", readme)

@@ -2,18 +2,18 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'china':'https://assets.pyecharts.org/assets/maps/china'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'china':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/maps/china'
         }
     });
 </script>
 
-        <div id="e7a761d07c8c4493bf4d320f94632925" style="width:100%; height:500px;"></div>
+        <div id="783c5ea64e194acd8079c8ed2afff253" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'china'], function(echarts) {
-                var chart_e7a761d07c8c4493bf4d320f94632925 = echarts.init(
-                    document.getElementById('e7a761d07c8c4493bf4d320f94632925'), 'white', {renderer: 'canvas'});
-                var option_e7a761d07c8c4493bf4d320f94632925 = {
+                var chart_783c5ea64e194acd8079c8ed2afff253 = echarts.init(
+                    document.getElementById('783c5ea64e194acd8079c8ed2afff253'), 'white', {renderer: 'canvas'});
+                var option_783c5ea64e194acd8079c8ed2afff253 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -61,31 +61,31 @@
             "data": [
                 {
                     "name": "\u5e7f\u4e1c",
-                    "value": 120
+                    "value": 24
                 },
                 {
                     "name": "\u5317\u4eac",
-                    "value": 31
+                    "value": 81
                 },
                 {
                     "name": "\u4e0a\u6d77",
-                    "value": 87
+                    "value": 132
                 },
                 {
                     "name": "\u6c5f\u897f",
-                    "value": 69
+                    "value": 25
                 },
                 {
                     "name": "\u6e56\u5357",
-                    "value": 41
+                    "value": 60
                 },
                 {
                     "name": "\u6d59\u6c5f",
-                    "value": 76
+                    "value": 138
                 },
                 {
                     "name": "\u6c5f\u82cf",
-                    "value": 113
+                    "value": 146
                 }
             ],
             "roam": true,
@@ -129,6 +129,6 @@
         }
     ]
 };
-                chart_e7a761d07c8c4493bf4d320f94632925.setOption(option_e7a761d07c8c4493bf4d320f94632925);
+                chart_783c5ea64e194acd8079c8ed2afff253.setOption(option_783c5ea64e194acd8079c8ed2afff253);
         });
     </script>

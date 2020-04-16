@@ -2,22 +2,22 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'echarts-wordcloud':'https://assets.pyecharts.org/assets/echarts-wordcloud.min'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'echarts-wordcloud':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts-wordcloud.min'
         }
     });
 </script>
 
-        <div id="fc11d944182b4a848059d6896b7cc9fc" style="width:100%; height:500px;"></div>
+        <div id="fa5dcc37961d4ae998fb976a5ae962b1" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'echarts-wordcloud'], function(echarts) {
-                var chart_fc11d944182b4a848059d6896b7cc9fc = echarts.init(
-                    document.getElementById('fc11d944182b4a848059d6896b7cc9fc'), 'white', {renderer: 'canvas'});
+                var chart_fa5dcc37961d4ae998fb976a5ae962b1 = echarts.init(
+                    document.getElementById('fa5dcc37961d4ae998fb976a5ae962b1'), 'white', {renderer: 'canvas'});
                     
-        var maskImage_28f586c717c847bd8312bdf58b9b8668 = new Image();
-        maskImage_28f586c717c847bd8312bdf58b9b8668.src = 'data:image/png;base64,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';
+        var maskImage_2e96f95ca1834a75bc2675c25abb0074 = new Image();
+        maskImage_2e96f95ca1834a75bc2675c25abb0074.src = 'data:image/png;base64,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';
         
-                var option_fc11d944182b4a848059d6896b7cc9fc = {
+                var option_fa5dcc37961d4ae998fb976a5ae962b1 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -55,7 +55,7 @@
     "series": [
         {
             "type": "wordCloud",
-            "maskImage": maskImage_28f586c717c847bd8312bdf58b9b8668,
+            "maskImage": maskImage_2e96f95ca1834a75bc2675c25abb0074,
             "rotationRange": [
                 -90,
                 90
@@ -72,7 +72,7 @@
                     "value": 1446,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(112,29,22)"
+                            "color": "rgb(125,102,90)"
                         }
                     }
                 },
@@ -81,7 +81,7 @@
                     "value": 928,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(145,14,56)"
+                            "color": "rgb(82,16,140)"
                         }
                     }
                 },
@@ -90,7 +90,7 @@
                     "value": 906,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(87,79,74)"
+                            "color": "rgb(122,112,26)"
                         }
                     }
                 },
@@ -99,7 +99,7 @@
                     "value": 825,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(24,78,82)"
+                            "color": "rgb(19,28,49)"
                         }
                     }
                 },
@@ -108,7 +108,7 @@
                     "value": 514,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,156,12)"
+                            "color": "rgb(63,125,140)"
                         }
                     }
                 },
@@ -117,7 +117,7 @@
                     "value": 486,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(118,150,116)"
+                            "color": "rgb(24,5,144)"
                         }
                     }
                 },
@@ -126,7 +126,7 @@
                     "value": 53,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(72,37,78)"
+                            "color": "rgb(4,137,48)"
                         }
                     }
                 },
@@ -135,7 +135,7 @@
                     "value": 163,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(74,110,118)"
+                            "color": "rgb(144,75,77)"
                         }
                     }
                 },
@@ -144,7 +144,7 @@
                     "value": 86,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(67,106,26)"
+                            "color": "rgb(21,3,106)"
                         }
                     }
                 },
@@ -153,7 +153,7 @@
                     "value": 17,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(62,112,158)"
+                            "color": "rgb(139,16,84)"
                         }
                     }
                 },
@@ -162,7 +162,7 @@
                     "value": 6,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(153,96,19)"
+                            "color": "rgb(75,33,154)"
                         }
                     }
                 },
@@ -171,7 +171,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(32,78,157)"
+                            "color": "rgb(106,62,131)"
                         }
                     }
                 },
@@ -180,7 +180,7 @@
                     "value": 1437,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(13,11,53)"
+                            "color": "rgb(92,114,142)"
                         }
                     }
                 },
@@ -189,7 +189,7 @@
                     "value": 422,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(82,45,29)"
+                            "color": "rgb(28,40,81)"
                         }
                     }
                 },
@@ -198,7 +198,7 @@
                     "value": 353,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(80,101,59)"
+                            "color": "rgb(17,135,43)"
                         }
                     }
                 },
@@ -207,7 +207,7 @@
                     "value": 331,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(94,96,139)"
+                            "color": "rgb(160,28,107)"
                         }
                     }
                 },
@@ -216,7 +216,7 @@
                     "value": 313,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(60,154,8)"
+                            "color": "rgb(12,83,2)"
                         }
                     }
                 },
@@ -225,7 +225,7 @@
                     "value": 307,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(137,155,56)"
+                            "color": "rgb(13,110,86)"
                         }
                     }
                 },
@@ -234,7 +234,7 @@
                     "value": 43,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(68,115,45)"
+                            "color": "rgb(42,28,100)"
                         }
                     }
                 },
@@ -243,7 +243,7 @@
                     "value": 15,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(67,61,24)"
+                            "color": "rgb(65,13,21)"
                         }
                     }
                 },
@@ -252,7 +252,7 @@
                     "value": 438,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(19,59,36)"
+                            "color": "rgb(33,35,20)"
                         }
                     }
                 },
@@ -261,7 +261,7 @@
                     "value": 957,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(49,155,123)"
+                            "color": "rgb(54,6,150)"
                         }
                     }
                 },
@@ -270,7 +270,7 @@
                     "value": 927,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(149,60,103)"
+                            "color": "rgb(52,39,21)"
                         }
                     }
                 },
@@ -279,7 +279,7 @@
                     "value": 908,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(10,32,141)"
+                            "color": "rgb(56,150,6)"
                         }
                     }
                 },
@@ -288,7 +288,7 @@
                     "value": 693,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(6,10,44)"
+                            "color": "rgb(150,130,108)"
                         }
                     }
                 },
@@ -297,7 +297,7 @@
                     "value": 611,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(114,132,51)"
+                            "color": "rgb(101,47,63)"
                         }
                     }
                 },
@@ -306,7 +306,7 @@
                     "value": 512,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(128,36,100)"
+                            "color": "rgb(54,133,23)"
                         }
                     }
                 },
@@ -315,7 +315,7 @@
                     "value": 382,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(50,84,108)"
+                            "color": "rgb(35,29,157)"
                         }
                     }
                 },
@@ -324,7 +324,7 @@
                     "value": 312,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(145,0,154)"
+                            "color": "rgb(45,7,72)"
                         }
                     }
                 },
@@ -333,7 +333,7 @@
                     "value": 187,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(7,69,50)"
+                            "color": "rgb(101,155,21)"
                         }
                     }
                 },
@@ -342,7 +342,7 @@
                     "value": 163,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(89,30,90)"
+                            "color": "rgb(153,6,122)"
                         }
                     }
                 },
@@ -351,7 +351,7 @@
                     "value": 104,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,94,56)"
+                            "color": "rgb(66,71,78)"
                         }
                     }
                 },
@@ -360,7 +360,7 @@
                     "value": 3,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(44,98,37)"
+                            "color": "rgb(62,43,143)"
                         }
                     }
                 },
@@ -369,7 +369,7 @@
                     "value": 1331,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(101,144,67)"
+                            "color": "rgb(156,109,18)"
                         }
                     }
                 },
@@ -378,7 +378,7 @@
                     "value": 941,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(110,7,97)"
+                            "color": "rgb(99,19,84)"
                         }
                     }
                 },
@@ -387,7 +387,7 @@
                     "value": 585,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(137,75,66)"
+                            "color": "rgb(73,107,115)"
                         }
                     }
                 },
@@ -396,7 +396,7 @@
                     "value": 473,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(117,132,74)"
+                            "color": "rgb(157,60,100)"
                         }
                     }
                 },
@@ -405,7 +405,7 @@
                     "value": 358,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(72,54,146)"
+                            "color": "rgb(124,89,130)"
                         }
                     }
                 },
@@ -414,7 +414,7 @@
                     "value": 246,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(158,133,116)"
+                            "color": "rgb(27,86,73)"
                         }
                     }
                 },
@@ -423,7 +423,7 @@
                     "value": 207,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(113,21,74)"
+                            "color": "rgb(112,45,108)"
                         }
                     }
                 },
@@ -432,7 +432,7 @@
                     "value": 194,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(119,72,33)"
+                            "color": "rgb(134,16,108)"
                         }
                     }
                 },
@@ -441,7 +441,7 @@
                     "value": 104,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(62,41,38)"
+                            "color": "rgb(32,24,100)"
                         }
                     }
                 },
@@ -450,7 +450,7 @@
                     "value": 87,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(84,7,148)"
+                            "color": "rgb(99,69,61)"
                         }
                     }
                 },
@@ -459,7 +459,7 @@
                     "value": 63,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(83,76,55)"
+                            "color": "rgb(147,128,133)"
                         }
                     }
                 },
@@ -468,7 +468,7 @@
                     "value": 48,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(120,75,28)"
+                            "color": "rgb(130,46,81)"
                         }
                     }
                 },
@@ -477,7 +477,7 @@
                     "value": 23,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(125,87,56)"
+                            "color": "rgb(74,22,42)"
                         }
                     }
                 },
@@ -486,7 +486,7 @@
                     "value": 5,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(67,109,97)"
+                            "color": "rgb(144,62,56)"
                         }
                     }
                 },
@@ -495,7 +495,7 @@
                     "value": 1328,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(31,91,16)"
+                            "color": "rgb(112,145,23)"
                         }
                     }
                 },
@@ -504,7 +504,7 @@
                     "value": 765,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(74,17,45)"
+                            "color": "rgb(45,11,10)"
                         }
                     }
                 },
@@ -513,7 +513,7 @@
                     "value": 452,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(60,134,111)"
+                            "color": "rgb(49,8,7)"
                         }
                     }
                 },
@@ -522,7 +522,7 @@
                     "value": 415,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(71,41,101)"
+                            "color": "rgb(90,98,28)"
                         }
                     }
                 },
@@ -531,7 +531,7 @@
                     "value": 253,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(36,134,112)"
+                            "color": "rgb(56,9,92)"
                         }
                     }
                 },
@@ -540,7 +540,7 @@
                     "value": 211,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(14,147,131)"
+                            "color": "rgb(18,48,130)"
                         }
                     }
                 },
@@ -549,7 +549,7 @@
                     "value": 180,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(126,31,89)"
+                            "color": "rgb(148,132,108)"
                         }
                     }
                 },
@@ -558,7 +558,7 @@
                     "value": 138,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(77,106,150)"
+                            "color": "rgb(6,139,65)"
                         }
                     }
                 },
@@ -567,7 +567,7 @@
                     "value": 116,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(150,147,43)"
+                            "color": "rgb(18,28,151)"
                         }
                     }
                 },
@@ -576,7 +576,7 @@
                     "value": 98,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(153,31,93)"
+                            "color": "rgb(76,80,49)"
                         }
                     }
                 },
@@ -585,7 +585,7 @@
                     "value": 93,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(105,35,41)"
+                            "color": "rgb(146,22,103)"
                         }
                     }
                 },
@@ -594,7 +594,7 @@
                     "value": 92,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(125,65,7)"
+                            "color": "rgb(8,28,52)"
                         }
                     }
                 },
@@ -603,7 +603,7 @@
                     "value": 90,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(148,37,19)"
+                            "color": "rgb(39,117,39)"
                         }
                     }
                 },
@@ -612,7 +612,7 @@
                     "value": 76,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(134,51,92)"
+                            "color": "rgb(1,68,35)"
                         }
                     }
                 },
@@ -621,7 +621,7 @@
                     "value": 76,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(126,13,149)"
+                            "color": "rgb(7,107,28)"
                         }
                     }
                 },
@@ -630,7 +630,7 @@
                     "value": 40,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(106,49,79)"
+                            "color": "rgb(61,37,18)"
                         }
                     }
                 },
@@ -639,7 +639,7 @@
                     "value": 36,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(72,125,58)"
+                            "color": "rgb(120,18,4)"
                         }
                     }
                 },
@@ -648,7 +648,7 @@
                     "value": 30,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(111,68,158)"
+                            "color": "rgb(113,118,140)"
                         }
                     }
                 },
@@ -657,7 +657,7 @@
                     "value": 7,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(150,118,3)"
+                            "color": "rgb(4,152,60)"
                         }
                     }
                 },
@@ -666,7 +666,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(36,157,91)"
+                            "color": "rgb(123,31,114)"
                         }
                     }
                 },
@@ -675,7 +675,7 @@
                     "value": 1309,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(110,93,40)"
+                            "color": "rgb(14,114,15)"
                         }
                     }
                 },
@@ -684,7 +684,7 @@
                     "value": 965,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(92,92,46)"
+                            "color": "rgb(37,37,80)"
                         }
                     }
                 },
@@ -693,7 +693,7 @@
                     "value": 900,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(16,13,26)"
+                            "color": "rgb(54,158,50)"
                         }
                     }
                 },
@@ -702,7 +702,7 @@
                     "value": 727,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(92,61,91)"
+                            "color": "rgb(107,55,77)"
                         }
                     }
                 },
@@ -711,7 +711,7 @@
                     "value": 461,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(141,71,60)"
+                            "color": "rgb(154,118,102)"
                         }
                     }
                 },
@@ -720,7 +720,7 @@
                     "value": 309,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(13,135,62)"
+                            "color": "rgb(107,128,81)"
                         }
                     }
                 },
@@ -729,7 +729,7 @@
                     "value": 260,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(66,17,134)"
+                            "color": "rgb(93,16,12)"
                         }
                     }
                 },
@@ -738,7 +738,7 @@
                     "value": 173,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(83,123,80)"
+                            "color": "rgb(57,121,43)"
                         }
                     }
                 },
@@ -747,7 +747,7 @@
                     "value": 155,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(92,54,60)"
+                            "color": "rgb(40,133,86)"
                         }
                     }
                 },
@@ -756,7 +756,7 @@
                     "value": 136,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(120,60,156)"
+                            "color": "rgb(152,121,68)"
                         }
                     }
                 },
@@ -765,7 +765,7 @@
                     "value": 121,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(6,126,4)"
+                            "color": "rgb(130,69,18)"
                         }
                     }
                 },
@@ -774,7 +774,7 @@
                     "value": 76,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(11,130,110)"
+                            "color": "rgb(82,70,74)"
                         }
                     }
                 },
@@ -783,7 +783,7 @@
                     "value": 62,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(157,23,79)"
+                            "color": "rgb(17,89,48)"
                         }
                     }
                 },
@@ -792,7 +792,7 @@
                     "value": 37,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(117,66,65)"
+                            "color": "rgb(103,88,36)"
                         }
                     }
                 },
@@ -801,7 +801,7 @@
                     "value": 32,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(124,78,115)"
+                            "color": "rgb(143,93,45)"
                         }
                     }
                 },
@@ -810,7 +810,7 @@
                     "value": 28,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(39,79,80)"
+                            "color": "rgb(82,100,31)"
                         }
                     }
                 },
@@ -819,7 +819,7 @@
                     "value": 4,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(93,63,67)"
+                            "color": "rgb(126,151,119)"
                         }
                     }
                 },
@@ -828,7 +828,7 @@
                     "value": 1275,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(113,93,36)"
+                            "color": "rgb(42,38,139)"
                         }
                     }
                 },
@@ -837,7 +837,7 @@
                     "value": 1088,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(16,64,153)"
+                            "color": "rgb(101,112,59)"
                         }
                     }
                 },
@@ -846,7 +846,7 @@
                     "value": 907,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,155,3)"
+                            "color": "rgb(36,74,27)"
                         }
                     }
                 },
@@ -855,7 +855,7 @@
                     "value": 837,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(4,71,84)"
+                            "color": "rgb(69,111,20)"
                         }
                     }
                 },
@@ -864,7 +864,7 @@
                     "value": 201,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(59,126,35)"
+                            "color": "rgb(49,87,153)"
                         }
                     }
                 },
@@ -873,7 +873,7 @@
                     "value": 195,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(66,157,63)"
+                            "color": "rgb(107,64,50)"
                         }
                     }
                 },
@@ -882,7 +882,7 @@
                     "value": 179,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(128,18,2)"
+                            "color": "rgb(75,74,106)"
                         }
                     }
                 },
@@ -891,7 +891,7 @@
                     "value": 119,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(13,97,108)"
+                            "color": "rgb(113,65,153)"
                         }
                     }
                 },
@@ -900,7 +900,7 @@
                     "value": 43,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(78,130,145)"
+                            "color": "rgb(41,5,74)"
                         }
                     }
                 },
@@ -909,7 +909,7 @@
                     "value": 1234,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(152,76,60)"
+                            "color": "rgb(79,25,44)"
                         }
                     }
                 },
@@ -918,7 +918,7 @@
                     "value": 802,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(34,78,140)"
+                            "color": "rgb(95,25,78)"
                         }
                     }
                 },
@@ -927,7 +927,7 @@
                     "value": 405,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(32,114,55)"
+                            "color": "rgb(65,17,120)"
                         }
                     }
                 },
@@ -936,7 +936,7 @@
                     "value": 337,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(2,85,70)"
+                            "color": "rgb(33,88,6)"
                         }
                     }
                 },
@@ -945,7 +945,7 @@
                     "value": 199,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(81,107,136)"
+                            "color": "rgb(27,26,123)"
                         }
                     }
                 },
@@ -954,7 +954,7 @@
                     "value": 78,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(10,150,123)"
+                            "color": "rgb(135,132,22)"
                         }
                     }
                 },
@@ -963,7 +963,7 @@
                     "value": 77,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(122,157,59)"
+                            "color": "rgb(93,155,2)"
                         }
                     }
                 },
@@ -972,7 +972,7 @@
                     "value": 36,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(28,93,112)"
+                            "color": "rgb(6,135,109)"
                         }
                     }
                 },
@@ -981,7 +981,7 @@
                     "value": 29,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(11,111,113)"
+                            "color": "rgb(118,56,29)"
                         }
                     }
                 },
@@ -990,7 +990,7 @@
                     "value": 3,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(102,24,131)"
+                            "color": "rgb(117,71,123)"
                         }
                     }
                 },
@@ -999,7 +999,7 @@
                     "value": 1201,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(99,152,67)"
+                            "color": "rgb(17,149,90)"
                         }
                     }
                 },
@@ -1008,7 +1008,7 @@
                     "value": 508,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(112,124,31)"
+                            "color": "rgb(74,133,20)"
                         }
                     }
                 },
@@ -1017,7 +1017,7 @@
                     "value": 147,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(141,76,44)"
+                            "color": "rgb(159,92,11)"
                         }
                     }
                 },
@@ -1026,7 +1026,7 @@
                     "value": 125,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(134,83,35)"
+                            "color": "rgb(143,22,74)"
                         }
                     }
                 },
@@ -1035,7 +1035,7 @@
                     "value": 115,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(98,27,150)"
+                            "color": "rgb(48,82,67)"
                         }
                     }
                 },
@@ -1044,7 +1044,7 @@
                     "value": 101,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(141,65,76)"
+                            "color": "rgb(35,140,75)"
                         }
                     }
                 },
@@ -1053,7 +1053,7 @@
                     "value": 66,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(155,35,108)"
+                            "color": "rgb(38,25,37)"
                         }
                     }
                 },
@@ -1062,7 +1062,7 @@
                     "value": 32,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(117,36,122)"
+                            "color": "rgb(71,96,109)"
                         }
                     }
                 },
@@ -1071,7 +1071,7 @@
                     "value": 22,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(146,61,132)"
+                            "color": "rgb(60,87,26)"
                         }
                     }
                 },
@@ -1080,7 +1080,7 @@
                     "value": 9,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(120,7,54)"
+                            "color": "rgb(41,2,21)"
                         }
                     }
                 },
@@ -1089,7 +1089,7 @@
                     "value": 8,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,82,83)"
+                            "color": "rgb(51,51,140)"
                         }
                     }
                 },
@@ -1098,7 +1098,7 @@
                     "value": 2,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(54,63,33)"
+                            "color": "rgb(53,14,100)"
                         }
                     }
                 },
@@ -1107,7 +1107,7 @@
                     "value": 2,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(145,150,144)"
+                            "color": "rgb(37,117,96)"
                         }
                     }
                 },
@@ -1116,7 +1116,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(16,128,48)"
+                            "color": "rgb(100,113,103)"
                         }
                     }
                 },
@@ -1125,7 +1125,7 @@
                     "value": 1169,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(110,83,132)"
+                            "color": "rgb(11,3,66)"
                         }
                     }
                 },
@@ -1134,7 +1134,7 @@
                     "value": 412,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(94,99,99)"
+                            "color": "rgb(66,146,107)"
                         }
                     }
                 },
@@ -1143,7 +1143,7 @@
                     "value": 393,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(20,157,55)"
+                            "color": "rgb(29,8,0)"
                         }
                     }
                 },
@@ -1152,7 +1152,7 @@
                     "value": 230,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(42,125,48)"
+                            "color": "rgb(6,147,131)"
                         }
                     }
                 },
@@ -1161,7 +1161,7 @@
                     "value": 211,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(98,34,18)"
+                            "color": "rgb(152,157,126)"
                         }
                     }
                 },
@@ -1170,7 +1170,7 @@
                     "value": 207,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(36,5,40)"
+                            "color": "rgb(53,147,116)"
                         }
                     }
                 },
@@ -1179,7 +1179,7 @@
                     "value": 139,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(13,30,37)"
+                            "color": "rgb(75,60,23)"
                         }
                     }
                 },
@@ -1188,7 +1188,7 @@
                     "value": 75,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(150,26,35)"
+                            "color": "rgb(98,41,40)"
                         }
                     }
                 },
@@ -1197,7 +1197,7 @@
                     "value": 23,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(152,64,13)"
+                            "color": "rgb(105,97,115)"
                         }
                     }
                 },
@@ -1206,7 +1206,7 @@
                     "value": 21,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(74,44,136)"
+                            "color": "rgb(56,131,1)"
                         }
                     }
                 },
@@ -1215,7 +1215,7 @@
                     "value": 17,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(62,70,26)"
+                            "color": "rgb(103,150,156)"
                         }
                     }
                 },
@@ -1224,7 +1224,7 @@
                     "value": 6,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(55,51,11)"
+                            "color": "rgb(51,62,5)"
                         }
                     }
                 },
@@ -1233,7 +1233,7 @@
                     "value": 5,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(4,91,145)"
+                            "color": "rgb(28,65,24)"
                         }
                     }
                 },
@@ -1242,7 +1242,7 @@
                     "value": 4,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(1,128,85)"
+                            "color": "rgb(123,11,91)"
                         }
                     }
                 },
@@ -1251,7 +1251,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(27,25,29)"
+                            "color": "rgb(59,82,151)"
                         }
                     }
                 },
@@ -1260,7 +1260,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(56,146,80)"
+                            "color": "rgb(139,34,154)"
                         }
                     }
                 },
@@ -1269,7 +1269,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(30,38,50)"
+                            "color": "rgb(133,151,107)"
                         }
                     }
                 },
@@ -1278,7 +1278,7 @@
                     "value": 1111,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(119,25,154)"
+                            "color": "rgb(126,35,143)"
                         }
                     }
                 },
@@ -1287,7 +1287,7 @@
                     "value": 885,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(54,43,123)"
+                            "color": "rgb(157,130,153)"
                         }
                     }
                 },
@@ -1296,7 +1296,7 @@
                     "value": 543,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(41,119,134)"
+                            "color": "rgb(87,38,26)"
                         }
                     }
                 },
@@ -1305,7 +1305,7 @@
                     "value": 321,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(56,41,69)"
+                            "color": "rgb(77,25,21)"
                         }
                     }
                 },
@@ -1314,7 +1314,7 @@
                     "value": 253,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(74,40,151)"
+                            "color": "rgb(48,56,35)"
                         }
                     }
                 },
@@ -1323,7 +1323,7 @@
                     "value": 162,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(34,30,120)"
+                            "color": "rgb(103,13,29)"
                         }
                     }
                 },
@@ -1332,7 +1332,7 @@
                     "value": 149,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(95,36,73)"
+                            "color": "rgb(39,79,91)"
                         }
                     }
                 },
@@ -1341,7 +1341,7 @@
                     "value": 133,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(140,33,87)"
+                            "color": "rgb(141,24,81)"
                         }
                     }
                 },
@@ -1350,7 +1350,7 @@
                     "value": 113,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(124,84,156)"
+                            "color": "rgb(111,23,136)"
                         }
                     }
                 },
@@ -1359,7 +1359,7 @@
                     "value": 67,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(115,116,13)"
+                            "color": "rgb(56,117,56)"
                         }
                     }
                 },
@@ -1368,7 +1368,7 @@
                     "value": 54,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(99,47,58)"
+                            "color": "rgb(159,88,141)"
                         }
                     }
                 },
@@ -1377,7 +1377,7 @@
                     "value": 45,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(124,42,119)"
+                            "color": "rgb(23,126,14)"
                         }
                     }
                 },
@@ -1386,7 +1386,7 @@
                     "value": 22,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(110,73,34)"
+                            "color": "rgb(153,44,132)"
                         }
                     }
                 },
@@ -1395,7 +1395,7 @@
                     "value": 1047,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(71,5,97)"
+                            "color": "rgb(109,15,97)"
                         }
                     }
                 },
@@ -1404,7 +1404,7 @@
                     "value": 566,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(124,6,130)"
+                            "color": "rgb(2,130,11)"
                         }
                     }
                 },
@@ -1413,7 +1413,7 @@
                     "value": 289,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(112,55,41)"
+                            "color": "rgb(23,155,87)"
                         }
                     }
                 },
@@ -1422,7 +1422,7 @@
                     "value": 184,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(41,117,61)"
+                            "color": "rgb(127,26,135)"
                         }
                     }
                 },
@@ -1431,7 +1431,7 @@
                     "value": 168,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(110,20,139)"
+                            "color": "rgb(34,62,111)"
                         }
                     }
                 },
@@ -1440,7 +1440,7 @@
                     "value": 137,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(48,21,77)"
+                            "color": "rgb(14,99,122)"
                         }
                     }
                 },
@@ -1449,7 +1449,7 @@
                     "value": 1041,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,122,141)"
+                            "color": "rgb(100,37,2)"
                         }
                     }
                 },
@@ -1458,7 +1458,7 @@
                     "value": 505,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(70,86,13)"
+                            "color": "rgb(12,103,104)"
                         }
                     }
                 },
@@ -1467,7 +1467,7 @@
                     "value": 299,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(72,110,150)"
+                            "color": "rgb(91,50,97)"
                         }
                     }
                 },
@@ -1476,7 +1476,7 @@
                     "value": 103,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(7,2,89)"
+                            "color": "rgb(96,22,91)"
                         }
                     }
                 },
@@ -1485,7 +1485,7 @@
                     "value": 66,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(56,48,159)"
+                            "color": "rgb(12,25,91)"
                         }
                     }
                 },
@@ -1494,7 +1494,7 @@
                     "value": 41,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(124,126,96)"
+                            "color": "rgb(69,26,108)"
                         }
                     }
                 },
@@ -1503,7 +1503,7 @@
                     "value": 271,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(78,91,99)"
+                            "color": "rgb(25,80,63)"
                         }
                     }
                 },
@@ -1512,7 +1512,7 @@
                     "value": 30,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(40,87,139)"
+                            "color": "rgb(45,145,59)"
                         }
                     }
                 },
@@ -1521,7 +1521,7 @@
                     "value": 25,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(129,105,156)"
+                            "color": "rgb(14,148,96)"
                         }
                     }
                 },
@@ -1530,7 +1530,7 @@
                     "value": 16,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(75,147,9)"
+                            "color": "rgb(15,87,46)"
                         }
                     }
                 },
@@ -1539,7 +1539,7 @@
                     "value": 15,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(76,76,107)"
+                            "color": "rgb(128,59,21)"
                         }
                     }
                 },
@@ -1548,7 +1548,7 @@
                     "value": 12,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(122,59,108)"
+                            "color": "rgb(145,120,30)"
                         }
                     }
                 },
@@ -1557,7 +1557,7 @@
                     "value": 9,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(119,5,145)"
+                            "color": "rgb(10,117,13)"
                         }
                     }
                 },
@@ -1566,7 +1566,7 @@
                     "value": 8,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(74,29,29)"
+                            "color": "rgb(35,5,72)"
                         }
                     }
                 },
@@ -1575,7 +1575,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(101,1,67)"
+                            "color": "rgb(157,124,10)"
                         }
                     }
                 },
@@ -1584,7 +1584,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(19,156,11)"
+                            "color": "rgb(40,106,91)"
                         }
                     }
                 },
@@ -1593,7 +1593,7 @@
                     "value": 1018,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(53,99,8)"
+                            "color": "rgb(152,39,21)"
                         }
                     }
                 },
@@ -1602,7 +1602,7 @@
                     "value": 896,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(8,0,4)"
+                            "color": "rgb(159,81,43)"
                         }
                     }
                 },
@@ -1611,7 +1611,7 @@
                     "value": 440,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(108,91,155)"
+                            "color": "rgb(41,133,85)"
                         }
                     }
                 },
@@ -1620,7 +1620,7 @@
                     "value": 365,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(108,14,112)"
+                            "color": "rgb(25,117,99)"
                         }
                     }
                 },
@@ -1629,7 +1629,7 @@
                     "value": 256,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(97,54,98)"
+                            "color": "rgb(135,96,74)"
                         }
                     }
                 },
@@ -1638,7 +1638,7 @@
                     "value": 214,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(56,0,90)"
+                            "color": "rgb(110,61,43)"
                         }
                     }
                 },
@@ -1647,7 +1647,7 @@
                     "value": 39,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(49,108,94)"
+                            "color": "rgb(20,151,47)"
                         }
                     }
                 },
@@ -1656,7 +1656,7 @@
                     "value": 28,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(157,101,43)"
+                            "color": "rgb(144,13,87)"
                         }
                     }
                 },
@@ -1665,7 +1665,7 @@
                     "value": 23,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(120,149,51)"
+                            "color": "rgb(12,14,0)"
                         }
                     }
                 },
@@ -1674,7 +1674,7 @@
                     "value": 14,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(146,67,101)"
+                            "color": "rgb(120,44,156)"
                         }
                     }
                 },
@@ -1683,7 +1683,7 @@
                     "value": 946,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(31,7,9)"
+                            "color": "rgb(61,56,132)"
                         }
                     }
                 },
@@ -1692,7 +1692,7 @@
                     "value": 565,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(133,24,150)"
+                            "color": "rgb(16,101,38)"
                         }
                     }
                 },
@@ -1701,7 +1701,7 @@
                     "value": 353,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(40,112,51)"
+                            "color": "rgb(56,2,93)"
                         }
                     }
                 },
@@ -1710,7 +1710,7 @@
                     "value": 254,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(57,21,66)"
+                            "color": "rgb(0,91,42)"
                         }
                     }
                 },
@@ -1719,7 +1719,7 @@
                     "value": 188,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(142,9,142)"
+                            "color": "rgb(81,59,39)"
                         }
                     }
                 },
@@ -1728,7 +1728,7 @@
                     "value": 166,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(123,126,151)"
+                            "color": "rgb(60,121,22)"
                         }
                     }
                 },
@@ -1737,7 +1737,7 @@
                     "value": 942,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(103,48,120)"
+                            "color": "rgb(138,40,74)"
                         }
                     }
                 },
@@ -1746,7 +1746,7 @@
                     "value": 177,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(48,120,100)"
+                            "color": "rgb(48,102,30)"
                         }
                     }
                 },
@@ -1755,7 +1755,7 @@
                     "value": 133,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(89,67,160)"
+                            "color": "rgb(78,117,6)"
                         }
                     }
                 },
@@ -1764,7 +1764,7 @@
                     "value": 80,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(54,99,110)"
+                            "color": "rgb(119,3,112)"
                         }
                     }
                 },
@@ -1773,7 +1773,7 @@
                     "value": 50,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(13,157,127)"
+                            "color": "rgb(151,145,10)"
                         }
                     }
                 },
@@ -1782,7 +1782,7 @@
                     "value": 46,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(24,56,44)"
+                            "color": "rgb(85,103,59)"
                         }
                     }
                 },
@@ -1791,7 +1791,7 @@
                     "value": 26,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(156,160,50)"
+                            "color": "rgb(0,160,155)"
                         }
                     }
                 },
@@ -1800,7 +1800,7 @@
                     "value": 21,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(121,3,96)"
+                            "color": "rgb(54,24,67)"
                         }
                     }
                 },
@@ -1809,7 +1809,7 @@
                     "value": 914,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(143,61,78)"
+                            "color": "rgb(100,123,40)"
                         }
                     }
                 },
@@ -1818,7 +1818,7 @@
                     "value": 311,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(5,132,55)"
+                            "color": "rgb(80,130,144)"
                         }
                     }
                 },
@@ -1827,7 +1827,7 @@
                     "value": 257,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(131,18,107)"
+                            "color": "rgb(20,96,62)"
                         }
                     }
                 },
@@ -1836,7 +1836,7 @@
                     "value": 131,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(44,92,83)"
+                            "color": "rgb(114,106,51)"
                         }
                     }
                 },
@@ -1845,7 +1845,7 @@
                     "value": 125,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(17,2,75)"
+                            "color": "rgb(113,138,66)"
                         }
                     }
                 },
@@ -1854,7 +1854,7 @@
                     "value": 122,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(157,39,89)"
+                            "color": "rgb(51,93,89)"
                         }
                     }
                 },
@@ -1863,7 +1863,7 @@
                     "value": 81,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(45,126,133)"
+                            "color": "rgb(25,62,113)"
                         }
                     }
                 },
@@ -1872,7 +1872,7 @@
                     "value": 67,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(104,115,149)"
+                            "color": "rgb(125,18,109)"
                         }
                     }
                 },
@@ -1881,7 +1881,7 @@
                     "value": 41,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,155,152)"
+                            "color": "rgb(129,82,22)"
                         }
                     }
                 },
@@ -1890,7 +1890,7 @@
                     "value": 26,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(123,96,146)"
+                            "color": "rgb(32,18,21)"
                         }
                     }
                 },
@@ -1899,7 +1899,7 @@
                     "value": 913,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(16,55,30)"
+                            "color": "rgb(152,155,46)"
                         }
                     }
                 },
@@ -1908,7 +1908,7 @@
                     "value": 483,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(31,97,16)"
+                            "color": "rgb(128,97,135)"
                         }
                     }
                 },
@@ -1917,7 +1917,7 @@
                     "value": 128,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(130,28,69)"
+                            "color": "rgb(59,114,73)"
                         }
                     }
                 },
@@ -1926,7 +1926,7 @@
                     "value": 105,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(28,4,33)"
+                            "color": "rgb(51,66,43)"
                         }
                     }
                 },
@@ -1935,7 +1935,7 @@
                     "value": 77,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(34,17,30)"
+                            "color": "rgb(89,95,4)"
                         }
                     }
                 },
@@ -1944,7 +1944,7 @@
                     "value": 22,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(15,153,110)"
+                            "color": "rgb(51,48,92)"
                         }
                     }
                 },
@@ -1953,7 +1953,7 @@
                     "value": 907,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(36,38,81)"
+                            "color": "rgb(134,12,30)"
                         }
                     }
                 },
@@ -1962,7 +1962,7 @@
                     "value": 644,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(106,76,5)"
+                            "color": "rgb(122,111,57)"
                         }
                     }
                 },
@@ -1971,7 +1971,7 @@
                     "value": 273,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(23,128,55)"
+                            "color": "rgb(7,48,153)"
                         }
                     }
                 },
@@ -1980,7 +1980,7 @@
                     "value": 187,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(157,143,94)"
+                            "color": "rgb(97,14,126)"
                         }
                     }
                 },
@@ -1989,7 +1989,7 @@
                     "value": 140,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(14,118,70)"
+                            "color": "rgb(40,150,3)"
                         }
                     }
                 },
@@ -1998,7 +1998,7 @@
                     "value": 107,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(30,10,25)"
+                            "color": "rgb(60,97,112)"
                         }
                     }
                 },
@@ -2007,7 +2007,7 @@
                     "value": 47,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(42,103,21)"
+                            "color": "rgb(30,80,6)"
                         }
                     }
                 },
@@ -2016,7 +2016,7 @@
                     "value": 43,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(117,97,103)"
+                            "color": "rgb(115,74,122)"
                         }
                     }
                 },
@@ -2025,7 +2025,7 @@
                     "value": 29,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(160,89,62)"
+                            "color": "rgb(158,4,68)"
                         }
                     }
                 },
@@ -2034,7 +2034,7 @@
                     "value": 10,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(53,118,75)"
+                            "color": "rgb(148,137,124)"
                         }
                     }
                 },
@@ -2043,7 +2043,7 @@
                     "value": 883,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(125,32,98)"
+                            "color": "rgb(72,145,95)"
                         }
                     }
                 },
@@ -2052,7 +2052,7 @@
                     "value": 536,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(30,115,124)"
+                            "color": "rgb(48,109,31)"
                         }
                     }
                 },
@@ -2061,7 +2061,7 @@
                     "value": 108,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(117,71,12)"
+                            "color": "rgb(5,26,80)"
                         }
                     }
                 },
@@ -2070,7 +2070,7 @@
                     "value": 49,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(81,105,70)"
+                            "color": "rgb(148,59,39)"
                         }
                     }
                 },
@@ -2079,7 +2079,7 @@
                     "value": 38,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(148,147,151)"
+                            "color": "rgb(24,129,52)"
                         }
                     }
                 },
@@ -2088,7 +2088,7 @@
                     "value": 37,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(74,22,0)"
+                            "color": "rgb(106,104,159)"
                         }
                     }
                 },
@@ -2097,7 +2097,7 @@
                     "value": 24,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(135,27,100)"
+                            "color": "rgb(30,112,35)"
                         }
                     }
                 },
@@ -2106,7 +2106,7 @@
                     "value": 24,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(113,73,95)"
+                            "color": "rgb(6,63,92)"
                         }
                     }
                 },
@@ -2115,7 +2115,7 @@
                     "value": 3,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(3,85,23)"
+                            "color": "rgb(47,33,60)"
                         }
                     }
                 },
@@ -2124,7 +2124,7 @@
                     "value": 3,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(128,58,25)"
+                            "color": "rgb(93,61,8)"
                         }
                     }
                 },
@@ -2133,7 +2133,7 @@
                     "value": 1,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(133,82,73)"
+                            "color": "rgb(73,38,25)"
                         }
                     }
                 },
@@ -2142,7 +2142,7 @@
                     "value": 874,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(50,69,73)"
+                            "color": "rgb(117,111,114)"
                         }
                     }
                 },
@@ -2151,7 +2151,7 @@
                     "value": 363,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(144,154,129)"
+                            "color": "rgb(155,38,154)"
                         }
                     }
                 },
@@ -2160,7 +2160,7 @@
                     "value": 162,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(32,95,65)"
+                            "color": "rgb(46,88,51)"
                         }
                     }
                 },
@@ -2169,7 +2169,7 @@
                     "value": 50,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(110,152,11)"
+                            "color": "rgb(9,91,1)"
                         }
                     }
                 },
@@ -2178,7 +2178,7 @@
                     "value": 21,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(111,89,134)"
+                            "color": "rgb(17,131,65)"
                         }
                     }
                 },
@@ -2187,7 +2187,7 @@
                     "value": 20,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(105,8,64)"
+                            "color": "rgb(112,55,109)"
                         }
                     }
                 },
@@ -2196,7 +2196,7 @@
                     "value": 16,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(131,49,34)"
+                            "color": "rgb(114,77,83)"
                         }
                     }
                 },
@@ -2205,7 +2205,7 @@
                     "value": 10,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(155,108,55)"
+                            "color": "rgb(35,142,24)"
                         }
                     }
                 },
@@ -2214,7 +2214,7 @@
                     "value": 789,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(90,69,135)"
+                            "color": "rgb(59,141,139)"
                         }
                     }
                 },
@@ -2223,7 +2223,7 @@
                     "value": 316,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(97,114,64)"
+                            "color": "rgb(116,107,28)"
                         }
                     }
                 },
@@ -2232,7 +2232,7 @@
                     "value": 303,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(73,97,107)"
+                            "color": "rgb(144,136,126)"
                         }
                     }
                 },
@@ -2241,7 +2241,7 @@
                     "value": 196,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(88,53,41)"
+                            "color": "rgb(155,112,42)"
                         }
                     }
                 },
@@ -2250,7 +2250,7 @@
                     "value": 93,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(152,140,106)"
+                            "color": "rgb(42,119,152)"
                         }
                     }
                 },
@@ -2259,7 +2259,7 @@
                     "value": 47,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(152,78,44)"
+                            "color": "rgb(26,86,98)"
                         }
                     }
                 },
@@ -2268,7 +2268,7 @@
                     "value": 32,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(149,50,18)"
+                            "color": "rgb(145,153,103)"
                         }
                     }
                 },
@@ -2277,7 +2277,7 @@
                     "value": 90,
                     "textStyle": {
                         "normal": {
-                            "color": "rgb(145,60,92)"
+                            "color": "rgb(65,106,21)"
                         }
                     }
                 }
@@ -2319,6 +2319,6 @@
         }
     ]
 };
-                chart_fc11d944182b4a848059d6896b7cc9fc.setOption(option_fc11d944182b4a848059d6896b7cc9fc);
+                chart_fa5dcc37961d4ae998fb976a5ae962b1.setOption(option_fa5dcc37961d4ae998fb976a5ae962b1);
         });
     </script>

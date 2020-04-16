@@ -2,17 +2,17 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'bmap':'https://assets.pyecharts.org/assets/bmap.min', 'baidu_map_api46':'https://api.map.baidu.com/api?v=2.0&ak=FAKE_AK', 'baidu_map_api52':'https://api.map.baidu.com/getscript?v=2.0&ak=FAKE_AK'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'bmap':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/bmap.min', 'baidu_map_api46':'https://api.map.baidu.com/api?v=2.0&ak=FAKE_AK', 'baidu_map_api52':'https://api.map.baidu.com/getscript?v=2.0&ak=FAKE_AK'
         }
     });
 </script>
 
-        <div id="0ff7f535ada941eba1f1f9f4286d3fad" style="width:100%; height:500px;"></div>
+        <div id="7da5f285bcfd45228477fa71ba24f460" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'bmap', 'baidu_map_api46', 'baidu_map_api52'], function(echarts) {
-                var chart_0ff7f535ada941eba1f1f9f4286d3fad = echarts.init(
-                    document.getElementById('0ff7f535ada941eba1f1f9f4286d3fad'), 'white', {renderer: 'canvas'});
+                var chart_7da5f285bcfd45228477fa71ba24f460 = echarts.init(
+                    document.getElementById('7da5f285bcfd45228477fa71ba24f460'), 'white', {renderer: 'canvas'});
                     
     var lngExtent = [39.5, 40.6];
     var latExtent = [115.9, 116.8];
@@ -53,7 +53,7 @@
         ]));
     }
     
-                var option_0ff7f535ada941eba1f1f9f4286d3fad = {
+                var option_7da5f285bcfd45228477fa71ba24f460 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -12895,8 +12895,8 @@
         }
     }
 };
-                chart_0ff7f535ada941eba1f1f9f4286d3fad.setOption(option_0ff7f535ada941eba1f1f9f4286d3fad);
-                    var bmap = chart_0ff7f535ada941eba1f1f9f4286d3fad.getModel().getComponent('bmap').getBMap();
+                chart_7da5f285bcfd45228477fa71ba24f460.setOption(option_7da5f285bcfd45228477fa71ba24f460);
+                    var bmap = chart_7da5f285bcfd45228477fa71ba24f460.getModel().getComponent('bmap').getBMap();
                     bmap.addControl(new BMap.MapTypeControl());
         });
     </script>

@@ -2,18 +2,18 @@
 <script>
     require.config({
         paths: {
-            'echarts':'https://assets.pyecharts.org/assets/echarts.min', 'bmap':'https://assets.pyecharts.org/assets/bmap.min', 'baidu_map_api46':'https://api.map.baidu.com/api?v=2.0&ak=FAKE_AK', 'baidu_map_api52':'https://api.map.baidu.com/getscript?v=2.0&ak=FAKE_AK'
+            'echarts':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/echarts.min', 'bmap':'https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/bmap.min', 'baidu_map_api46':'https://api.map.baidu.com/api?v=2.0&ak=FAKE_AK', 'baidu_map_api52':'https://api.map.baidu.com/getscript?v=2.0&ak=FAKE_AK'
         }
     });
 </script>
 
-        <div id="10eb358b4d8c4cd9a8285fbd95bc7f29" style="width:100%; height:500px;"></div>
+        <div id="9f55385c2adc4589ada59e2b3d76d9c2" style="width:100%; height:500px;"></div>
 
 <script>
         require(['echarts', 'bmap', 'baidu_map_api46', 'baidu_map_api52'], function(echarts) {
-                var chart_10eb358b4d8c4cd9a8285fbd95bc7f29 = echarts.init(
-                    document.getElementById('10eb358b4d8c4cd9a8285fbd95bc7f29'), 'white', {renderer: 'canvas'});
-                var option_10eb358b4d8c4cd9a8285fbd95bc7f29 = {
+                var chart_9f55385c2adc4589ada59e2b3d76d9c2 = echarts.init(
+                    document.getElementById('9f55385c2adc4589ada59e2b3d76d9c2'), 'white', {renderer: 'canvas'});
+                var option_9f55385c2adc4589ada59e2b3d76d9c2 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -60,7 +60,7 @@
                     "value": [
                         113.26653,
                         23.132191,
-                        149
+                        79
                     ]
                 },
                 {
@@ -68,7 +68,7 @@
                     "value": [
                         116.407526,
                         39.90403,
-                        148
+                        73
                     ]
                 },
                 {
@@ -76,7 +76,7 @@
                     "value": [
                         121.473701,
                         31.230416,
-                        59
+                        134
                     ]
                 },
                 {
@@ -84,7 +84,7 @@
                     "value": [
                         115.909228,
                         28.675696,
-                        134
+                        27
                     ]
                 },
                 {
@@ -92,7 +92,7 @@
                     "value": [
                         112.98381,
                         28.112444,
-                        25
+                        80
                     ]
                 },
                 {
@@ -100,7 +100,7 @@
                     "value": [
                         120.152791,
                         30.267446,
-                        100
+                        62
                     ]
                 },
                 {
@@ -108,7 +108,7 @@
                     "value": [
                         118.763232,
                         32.061707,
-                        94
+                        129
                     ]
                 }
             ],
@@ -163,8 +163,8 @@
         "roam": true
     }
 };
-                chart_10eb358b4d8c4cd9a8285fbd95bc7f29.setOption(option_10eb358b4d8c4cd9a8285fbd95bc7f29);
-                    var bmap = chart_10eb358b4d8c4cd9a8285fbd95bc7f29.getModel().getComponent('bmap').getBMap();
+                chart_9f55385c2adc4589ada59e2b3d76d9c2.setOption(option_9f55385c2adc4589ada59e2b3d76d9c2);
+                    var bmap = chart_9f55385c2adc4589ada59e2b3d76d9c2.getModel().getComponent('bmap').getBMap();
                     bmap.addControl(new BMap.MapTypeControl());
         });
     </script>
