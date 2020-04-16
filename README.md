@@ -43,10 +43,11 @@ python3 -m pyecharts_demo
 python3 -m cutecharts_demo
 ```
 
-**启动mpld3 demo**
+**plotly demo**
 
-> todo
-
+```bash
+python3 -m plotly_demo
+```
 ### 同步 [pyecharts-gallery](https://github.com/pyecharts/pyecharts-gallery)
 
 ```bash
