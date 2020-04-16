@@ -23,7 +23,7 @@ CurrentConfig.ONLINE_HOST = "https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-ass
 
 
 def render(self, path: str = "render.html", template_name: str = "simple_chart.html", *args, **kwargs):
-    charts = self if isinstance(self, Iterable) else (self,)
+    charts = self if (isinstance(self, Iterable) and not isinstance(self, Tab)) else (self,)
     for chart in charts:
         chart.width = "100%"
     html = self.render_notebook().__html__()
