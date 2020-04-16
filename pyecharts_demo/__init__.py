@@ -46,7 +46,7 @@ def pyecharts():
     set_auto_scroll_bottom(False)
     put_markdown(r"""## Pyecharts
 
-    [pyecharts](https://github.com/cutecharts/cutecharts.py) 是一个使用Python创建 [Echarts](https://github.com/ecomfe/echarts) 可视化图表的库。
+    [pyecharts](https://github.com/pyecharts/pyecharts) 是一个使用Python创建 [Echarts](https://github.com/ecomfe/echarts) 可视化图表的库。
 
     PyWebIO 支持输出使用 pyecharts 库创建的图表。使用方式为在PyWebIO会话中调用：
     ```python
