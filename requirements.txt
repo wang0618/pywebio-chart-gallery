@@ -2,5 +2,3 @@ git+https://github.com/wang0618/PyWebIO.git@dev#egg=pywebio
 cutecharts
 pyecharts
 plotly==4.6.0
-numpy
-scikit-image

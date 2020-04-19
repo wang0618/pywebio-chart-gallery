@@ -43,14 +43,15 @@ python3 -m pyecharts_demo
 python3 -m cutecharts_demo
 ```
 
-**plotly demo**
+**启动plotly demo**
 
 ```bash
 python3 -m plotly_demo
 ```
-### 同步 [pyecharts-gallery](https://github.com/pyecharts/pyecharts-gallery)
+### 重新构建demo
 
 ```bash
 git submodule init
 python3 pyecharts_demo/build_demos.py
+python3 plotly_demo/build_demos.py
 ```

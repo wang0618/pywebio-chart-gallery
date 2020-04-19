@@ -83,6 +83,9 @@ async def plotly_demo():
     具体可以参考下面demo中的源码。
 
     ## Demos List
+    
+    以下示例修改自 [plotly官方文档](https://plotly.com/python/)
+    
     ### Category
     """, strip_indent=4)
 
