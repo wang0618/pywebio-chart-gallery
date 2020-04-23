@@ -5,16 +5,26 @@ name: default
 clone:
   disable: true
 
+trigger:
+  branch:
+    - master
+  event:
+    - push
+
 steps:
   - name: clone
     commands:
       - git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
       - git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
-      - git clone --depth 1 https://github.com/octocat/hello-world.git .
+      - git init
+      - git remote add origin $DRONE_GIT_HTTP_URL
+      - git fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +$DRONE_COMMIT:refs/remotes/origin/$DRONE_BRANCH
+      - git checkout --progress --force -B $DRONE_BRANCH refs/remotes/origin/$DRONE_BRANCH
+      - git log -1
   - name: build
     commands:
-      - docker bulid -t pywebio-chart .
+      - docker build -t pywebio-chart .
   - name: deploy
     commands:
-      - docker build -t ${DRONE_REPO} .
-      - docker service create --name pywebio-chart pywebio-chart || docker service update --force pywebio-chart
+      - docker rm -f pywebio-charts || true
+      - docker run --restart=always --name pywebio-charts -d pywebio-chart

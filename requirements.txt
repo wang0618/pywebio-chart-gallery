@@ -1,4 +1,4 @@
-git+https://github.com/wang0618/PyWebIO.git@dev#egg=pywebio
+pywebio
 cutecharts
 pyecharts
 plotly==4.6.0

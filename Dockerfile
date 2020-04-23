@@ -1,9 +1,11 @@
 FROM python:3
+
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
+ADD ./ .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt \
+    && pip install --no-cache-dir -U https://code.aliyun.com/wang0618/pywebio/repository/archive.zip
 
 # 设置时区
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
