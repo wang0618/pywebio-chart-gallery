@@ -1,0 +1,20 @@
+kind: pipeline
+type: exec
+name: default
+
+clone:
+  disable: true
+
+steps:
+  - name: clone
+    commands:
+      - git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+      - git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
+      - git clone --depth 1 https://github.com/octocat/hello-world.git .
+  - name: build
+    commands:
+      - docker bulid -t pywebio-chart .
+  - name: deploy
+    commands:
+      - docker build -t ${DRONE_REPO} .
+      - docker service create --name pywebio-chart pywebio-chart || docker service update --force pywebio-chart
