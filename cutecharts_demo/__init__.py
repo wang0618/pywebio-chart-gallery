@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from pywebio.input import actions
+from pywebio.session import hold
 from pywebio.output import *
 from .demos.example_bar import main as bar
 from .demos.example_line import main as line
@@ -30,7 +30,7 @@ def show_demo(name):
              '/cutecharts_demo/demos/example_%s.py" target="_blank">源码</a>' % name.lower())
 
 
-def cutecharts():
+async def cutecharts():
     set_auto_scroll_bottom(False)
 
     put_markdown(r"""## Cutecharts.py
@@ -50,4 +50,4 @@ def cutecharts():
     put_buttons(list(all_demos.keys()), onclick=show_demo)
     set_anchor('demo-start')
 
-    actions(buttons=['退出'])
+    await hold()

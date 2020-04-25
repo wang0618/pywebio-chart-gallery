@@ -6,14 +6,14 @@ import tornado.web
 from tornado.options import define, options
 
 from cutecharts_demo import cutecharts
-from pyecharts_demo import pyecharts
 from plotly_demo import plotly_demo
+from pyecharts_demo import pyecharts
 from pywebio import STATIC_PATH
 from pywebio.output import put_markdown, set_auto_scroll_bottom, set_title
 from pywebio.platform.tornado import webio_handler
 
 
-def index():
+async def index():
     set_title("PyWebIO Chart Gallery")
     set_auto_scroll_bottom(False)
     readme_file = path.join(path.dirname(__file__), "README.md")

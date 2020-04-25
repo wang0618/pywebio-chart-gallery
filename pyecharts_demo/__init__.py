@@ -6,6 +6,7 @@ from os import path
 
 import pywebio
 from pywebio.output import *
+from pywebio.session import hold
 
 src_path = path.join(path.dirname(__file__), "demos")
 
@@ -42,7 +43,7 @@ def show_demo(name):
         put_buttons(['查看源码'], partial(show_code, code=code, after=anchor), anchor=anchor)
 
 
-def pyecharts():
+async def pyecharts():
     set_auto_scroll_bottom(False)
     put_markdown(r"""## Pyecharts
 
@@ -62,4 +63,4 @@ def pyecharts():
 
     set_anchor('content_start')
 
-    pywebio.input.actions(buttons=['退出'])
+    await hold()

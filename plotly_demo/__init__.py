@@ -2,7 +2,7 @@ import re
 from functools import partial
 from os import path
 
-from pywebio.input import *
+from pywebio.session import hold
 from pywebio.output import *
 from .inventory import all_demos
 
@@ -91,4 +91,4 @@ async def plotly_demo():
 
     put_buttons(list(all_demos.keys()), onclick=show_chapter)
 
-    await actions(buttons=['Quit'])
+    await hold()
