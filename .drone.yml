@@ -6,8 +6,6 @@ clone:
   disable: true
 
 trigger:
-  branch:
-    - master
   event:
     - push
 
