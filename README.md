@@ -10,13 +10,13 @@
 
 ## Charts Snapshot
 ### Pyecharts
-![pyecharts](/assets/pyecharts.gif)
+[![pyecharts](/assets/pyecharts.gif)](http://pywebio-charts.wangweimin.site/?pywebio_api=pyecharts)
 
 ### Cutecharts.py
-![cutecharts](/assets/cutecharts.png)
+[![cutecharts](/assets/cutecharts.png)](http://pywebio-charts.wangweimin.site/?pywebio_api=cutecharts)
 
 ### Plotly
-![plotly](/assets/plotly.png)
+[![plotly](/assets/plotly.png)](http://pywebio-charts.wangweimin.site/?pywebio_api=plotly)
 
 <div></div>
 
