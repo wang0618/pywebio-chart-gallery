@@ -8,6 +8,7 @@ from tornado.options import define, options
 from cutecharts_demo import cutecharts
 from plotly_demo import plotly_demo
 from pyecharts_demo import pyecharts
+from bokeh_demo import bokehs
 from pywebio import STATIC_PATH
 from pywebio.output import put_markdown, set_auto_scroll_bottom, set_title
 from pywebio.platform.tornado import webio_handler
@@ -21,7 +22,8 @@ async def index():
 
     readme = re.sub(r"\[\*\*demos\*\*\]\(.*?\?pywebio_api=(.+?)\)", r"[**demos**](./?pywebio_api=\g<1>)", readme)
     cdn = r"https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master"
-    readme = re.sub(r"!\[(.+?)\]\(.*?(.+?)\)", r"![\g<1>](%s\g<2>)" % cdn, readme)
+    github_url = r"https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master"
+    readme = readme.replace(github_url, cdn)
     readme = re.sub(r"<div></div>[\s\S]*$", "", readme)
 
     put_markdown(readme)
@@ -36,6 +38,7 @@ if __name__ == "__main__":
         (r"/cutecharts", webio_handler(cutecharts)),
         (r"/pyecharts", webio_handler(pyecharts)),
         (r"/plotly", webio_handler(plotly_demo)),
+        (r"/bokeh", webio_handler(bokehs)),
         (r"/(.*)", tornado.web.StaticFileHandler, {"path": STATIC_PATH, 'default_filename': 'index.html'})
     ])
     application.listen(port=options.port)

@@ -2,3 +2,7 @@ pywebio
 cutecharts
 pyecharts
 plotly==4.6.0
+bokeh
+numpy
+pandas
+colorcet

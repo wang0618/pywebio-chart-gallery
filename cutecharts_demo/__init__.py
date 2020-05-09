@@ -35,7 +35,7 @@ async def cutecharts():
 
     put_markdown(r"""## Cutecharts.py
     
-    [cutecharts.py](https://github.com/cutecharts/cutecharts.py) 是一个创建具有卡通风格的可视化图表的python库。底层使用了 [chart.xkcd](https://github.com/timqian/chart.xkcd) Javascript库。
+    [cutecharts.py](https://github.com/cutecharts/cutecharts.py) 是一个可以创建具有卡通风格的可视化图表的python库。底层使用了 [chart.xkcd](https://github.com/timqian/chart.xkcd) Javascript库。
     
     PyWebIO 支持输出使用 cutecharts.py 库创建的图表。使用方式为在PyWebIO会话中调用 
     ```python

@@ -2,56 +2,64 @@
 
 [PyWebIO](https://github.com/wang0618/PyWebIO) 支持使用第三方库进行数据可视化
 
-本项目展示了在 PyWebIO 使用以下图表库的方式：
+本项目展示了在 PyWebIO 中使用以库进行数据可视化：
 
+ - [bokeh](https://github.com/bokeh/bokeh): 使用Bokeh进行数据可视化 [**demos**](http://pywebio-charts.wangweimin.site/?pywebio_api=bokeh)
  - [pyecharts](https://github.com/pyecharts/pyecharts): 使用Python创建基于Echarts的图表 [**demos**](http://pywebio-charts.wangweimin.site/?pywebio_api=pyecharts)
  - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [**demos**](http://pywebio-charts.wangweimin.site/?pywebio_api=cutecharts)
  - [plotly](https://github.com/plotly/plotly.py/): 非常流行的Python数据可视化库，可以生成高质量的交互式图表 [**demos**](http://pywebio-charts.wangweimin.site/?pywebio_api=plotly)
 
 ## Charts Snapshot
+### Bokeh
+
+<p align="center">
+    <a href="http://pywebio-charts.wangweimin.site/?pywebio_api=bokeh">
+        <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/bokeh.png" alt="bokeh demo"/>
+    </a>
+</p>
+
 ### Pyecharts
-[![pyecharts](/assets/pyecharts.gif)](http://pywebio-charts.wangweimin.site/?pywebio_api=pyecharts)
+
+<p align="center">
+    <a href="http://pywebio-charts.wangweimin.site/?pywebio_api=pyecharts">
+        <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/pyecharts.gif" alt="pyecharts demo"/>
+    </a>
+</p>
+
 
 ### Cutecharts.py
-[![cutecharts](/assets/cutecharts.png)](http://pywebio-charts.wangweimin.site/?pywebio_api=cutecharts)
+
+<p align="center">
+    <a href="http://pywebio-charts.wangweimin.site/?pywebio_api=cutecharts">
+        <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/cutecharts.png" alt="cutecharts demo"/>
+    </a>
+</p>
+
 
 ### Plotly
-[![plotly](/assets/plotly.png)](http://pywebio-charts.wangweimin.site/?pywebio_api=plotly)
+
+<p align="center">
+    <a href="http://pywebio-charts.wangweimin.site/?pywebio_api=plotly">
+        <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/plotly.png" alt="plotly demo"/>
+    </a>
+</p>
+
 
 <div></div>
 
 ## Run Demo
 
-### 启动全部demo
+### 启动demo
 
 ```bash
 python3 run.py
 ```
 
-### 仅启动部分demo
-
-**启动pyecharts demo**
-
-```bash
-python3 pyecharts_demo/build_demos.py
-python3 -m pyecharts_demo
-```
-
-**启动cutecharts.py demo**
-
-```bash
-python3 -m cutecharts_demo
-```
-
-**启动plotly demo**
-
-```bash
-python3 -m plotly_demo
-```
 ### 重新构建demo
 
 ```bash
-git submodule init
+git submodule update --init --recursive --depth=1
 python3 pyecharts_demo/build_demos.py
 python3 plotly_demo/build_demos.py
+python3 bokeh_demo/build_demos.py
 ```
