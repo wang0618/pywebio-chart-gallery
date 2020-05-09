@@ -76,11 +76,12 @@ async def bokehs():
     
     ```python
     from bokeh.io import output_notebook
-
+    from bokeh.io import show
 
     output_notebook(notebook_type='pywebio')
-    
-    show(some_fig)
+    fig = figure(...)
+    ...
+    show(fig)
     ``` 
     具体可以参考下面demo中的源码。
 
