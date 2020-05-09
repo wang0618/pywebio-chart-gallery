@@ -6,6 +6,7 @@ from bokeh.models import (BasicTicker, Circle, ColumnDataSource, DataRange1d,
 from bokeh.resources import INLINE
 from bokeh.sampledata.iris import flowers
 from bokeh.util.browser import view
+from bokeh.plotting import output_file, show
 
 colormap = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}
 
@@ -75,13 +76,6 @@ for y in yattrs:
 
 grid = gridplot(plots)
 
-doc = Document()
-doc.add_root(grid)
+output_file("iris_splom.html", title="iris_splom.py example")
 
-if __name__ == "__main__":
-    doc.validate()
-    filename = "iris_splom.html"
-    with open(filename, "w") as f:
-        f.write(file_html(doc, INLINE, "Iris Data SPLOM"))
-    print("Wrote %s" % filename)
-    view(filename)
+show(grid)
