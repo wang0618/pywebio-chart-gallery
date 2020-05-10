@@ -79,8 +79,8 @@ async def bokehs():
     from bokeh.io import show
 
     output_notebook(notebook_type='pywebio')
-    fig = figure(...)
-    ...
+    fig = ...  # 创建bokeh图表
+    
     show(fig)
     ``` 
     具体可以参考下面demo中的源码。
