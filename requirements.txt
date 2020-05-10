@@ -6,3 +6,4 @@ bokeh
 numpy
 pandas
 colorcet
+scipy
