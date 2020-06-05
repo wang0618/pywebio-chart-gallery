@@ -19,11 +19,11 @@ all_demos = OrderedDict([
 ])
 
 
+@use_scope('demo', clear=True)
 def show_demo(name):
     if name not in all_demos:
         return
 
-    clear_after('demo-start')
     all_demos[name]()
 
     put_html('<a href="https://github.com/wang0618/pywebio-chart-gallery/blob/master'
@@ -48,6 +48,5 @@ async def cutecharts():
     """, strip_indent=4)
 
     put_buttons(list(all_demos.keys()), onclick=show_demo)
-    set_anchor('demo-start')
 
     await hold()

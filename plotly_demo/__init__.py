@@ -2,22 +2,13 @@ import re
 from functools import partial
 from os import path
 
-from pywebio.session import hold
 from pywebio.output import *
+from pywebio.session import hold
 from .inventory import all_demos
 
 here = path.dirname(path.abspath(__file__))
 
 demos_dir = path.join(here, 'demos')
-
-
-def show_hide_code(btn, code='', after=''):
-    remove('code')
-    remove('remove-code-btn')
-
-    if btn == '查看源码':
-        put_code(code, 'python', after=after, anchor='code')
-        put_buttons(['隐藏源码'], onclick=show_hide_code, anchor='remove-code-btn', after='code')
 
 
 async def exec_md(md):
@@ -27,16 +18,14 @@ async def exec_md(md):
             put_html(part[len("```put_html"):-3].strip())
         elif part.startswith('```python') and 'pywebio' in part:
             code = part[len("```python"):-3].strip()
-            anchor = 'show-code-%s' % idx
-            put_buttons(['查看源码'], onclick=partial(show_hide_code, code=code, after=anchor), anchor=anchor)
+
+            put_collapse('查看源码', put_code(code, 'python'))
         else:
             put_markdown(part)
 
 
+@use_scope('demo', clear=True)
 async def show_demo(name, chapter):
-    clear_after('demo-start')
-    set_anchor('demo-start')
-
     title = all_demos.get(chapter, {}).get(name, name)
     put_markdown("### %s" % title)
 
@@ -48,10 +37,8 @@ async def show_demo(name, chapter):
     await exec_md(md)
 
 
+@use_scope('chapter', clear=True)
 async def show_chapter(chapter):
-    clear_after('chapter-start')
-    set_anchor('chapter-start')
-
     put_markdown("### %s" % chapter)
     demos = all_demos.get(chapter, {})
 

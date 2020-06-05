@@ -13,17 +13,11 @@ src_path = path.join(path.dirname(__file__), "demos")
 all_demos = OrderedDict(json.load(open(path.join(path.dirname(__file__), 'inventory.json'))))
 
 
-def show_code(btn, code, after):
-    remove('code')
-    # todo 检测open调用，提供文件链接
-    put_code(code, 'python', after=after, anchor='code')
-
-
+@use_scope('content', clear=True)
 def show_demo(name):
     if name not in all_demos:
         return
 
-    clear_after('content_start')
     base_dir = path.join(src_path, name)
     files = os.listdir(base_dir)
     for file in files:
@@ -39,8 +33,9 @@ def show_demo(name):
             continue
 
         put_html(html)
-        anchor = 'show-code-%s' % name
-        put_buttons(['查看源码'], partial(show_code, code=code, after=anchor), anchor=anchor)
+
+        # todo 检测open调用，提供文件链接
+        put_collapse('查看源码', put_code(code, 'python'))
 
 
 async def pyecharts():
@@ -60,7 +55,5 @@ async def pyecharts():
     """, strip_indent=4)
 
     put_buttons([(v, k) for k, v in all_demos.items()], onclick=show_demo)
-
-    set_anchor('content_start')
 
     await hold()

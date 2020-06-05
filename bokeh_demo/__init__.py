@@ -31,11 +31,11 @@ style = """
 """
 
 
+@use_scope('demo', clear=True)
 def show_demo(_, name):
     if name not in demo_set:
         return
 
-    clear_after('demo-start')
     put_markdown('-------')
     script = open(path.join(demos_dir, name + '.py')).read()
 
@@ -45,7 +45,7 @@ def show_demo(_, name):
     script = re.sub(r'output_file\(.*?\)', "output_notebook(notebook_type='pywebio')", script)
     script = 'import pywebio\nfrom bokeh.io import output_notebook\n' + script
     put_markdown("**源码**\n```python\n%s\n```" % script)
-    scroll_to('demo-start', TOP)
+    scroll_to('demo', Position.TOP)
 
 
 def get_demos_table(demos):
@@ -93,7 +93,5 @@ async def bokehs():
     output_notebook(verbose=False, notebook_type='pywebio')
 
     put_html(get_demos_table(demos))
-
-    set_anchor('demo-start')
 
     await hold()
