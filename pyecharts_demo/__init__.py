@@ -18,6 +18,10 @@ def show_demo(name):
     if name not in all_demos:
         return
 
+    with use_scope('loading'):
+        put_text('加载中')
+        put_loading()
+
     base_dir = path.join(src_path, name)
     files = os.listdir(base_dir)
     for file in files:
@@ -37,9 +41,10 @@ def show_demo(name):
         # todo 检测open调用，提供文件链接
         put_collapse('查看源码', put_code(code, 'python'))
 
+    clear('loading')
+
 
 async def pyecharts():
-    set_auto_scroll_bottom(False)
     put_markdown(r"""## Pyecharts
 
     [pyecharts](https://github.com/pyecharts/pyecharts) 是一个使用Python创建 [Echarts](https://github.com/ecomfe/echarts) 可视化图表的库。
@@ -55,5 +60,8 @@ async def pyecharts():
     """, strip_indent=4)
 
     put_buttons([(v, k) for k, v in all_demos.items()], onclick=show_demo)
+    put_markdown('----')
+    set_scope('content')
+    set_scope('loading')
 
     await hold()

@@ -1,22 +1,18 @@
+import argparse
 import re
 from os import path
 
-import tornado.ioloop
-import tornado.web
-from tornado.options import define, options
-
+from bokeh_demo import bokehs
 from cutecharts_demo import cutecharts
 from plotly_demo import plotly_demo
 from pyecharts_demo import pyecharts
-from bokeh_demo import bokehs
-from pywebio import STATIC_PATH
-from pywebio.output import put_markdown, set_auto_scroll_bottom, set_title
-from pywebio.platform.tornado import webio_handler
+from pywebio import start_server
+from pywebio.output import put_markdown
+from pywebio.session import set_env
 
 
 async def index():
-    set_title("PyWebIO Chart Gallery")
-    set_auto_scroll_bottom(False)
+    set_env(title="PyWebIO Chart Gallery")
     readme_file = path.join(path.dirname(__file__), "README.md")
     readme = open(readme_file).read()
 
@@ -30,16 +26,15 @@ async def index():
 
 
 if __name__ == "__main__":
-    define("port", default=8080, help="run on the given port", type=int)
-    tornado.options.parse_command_line()
+    parser = argparse.ArgumentParser(description="PyWebIO Chart Gallery")
+    parser.add_argument('port', default=8080, help="run on the given port", type=int)
+    parser.add_argument('--debug', action="store_true")
+    args = parser.parse_args()
 
-    application = tornado.web.Application([
-        (r"/io", webio_handler(index)),
-        (r"/cutecharts", webio_handler(cutecharts)),
-        (r"/pyecharts", webio_handler(pyecharts)),
-        (r"/plotly", webio_handler(plotly_demo)),
-        (r"/bokeh", webio_handler(bokehs)),
-        (r"/(.*)", tornado.web.StaticFileHandler, {"path": STATIC_PATH, 'default_filename': 'index.html'})
-    ])
-    application.listen(port=options.port)
-    tornado.ioloop.IOLoop.current().start()
+    start_server({
+        'index': index,
+        'cutecharts': cutecharts,
+        'pyecharts': pyecharts,
+        'plotly': plotly_demo,
+        'bokeh': bokehs,
+    }, port=args.port, debug=args.debug)

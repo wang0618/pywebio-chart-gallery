@@ -3,7 +3,7 @@ from functools import partial
 from os import path
 
 from pywebio.output import *
-from pywebio.session import hold
+from pywebio.session import hold, set_env
 from .inventory import all_demos
 
 here = path.dirname(path.abspath(__file__))
@@ -54,8 +54,7 @@ async def show_chapter(chapter):
 
 
 async def plotly_demo():
-    set_auto_scroll_bottom(False)
-    set_title("Plotly Demo")
+    set_env(title="Plotly Demo")
 
     put_markdown(r"""## Plotly
 

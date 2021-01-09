@@ -31,8 +31,6 @@ def show_demo(name):
 
 
 async def cutecharts():
-    set_auto_scroll_bottom(False)
-
     put_markdown(r"""## Cutecharts.py
     
     [cutecharts.py](https://github.com/cutecharts/cutecharts.py) 是一个可以创建具有卡通风格的可视化图表的python库。底层使用了 [chart.xkcd](https://github.com/timqian/chart.xkcd) Javascript库。
