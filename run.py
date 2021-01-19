@@ -27,7 +27,7 @@ async def index():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="PyWebIO Chart Gallery")
-    parser.add_argument('port', default=8080, help="run on the given port", type=int)
+    parser.add_argument('port', nargs='?', default=8080, help="run on the given port", type=int)
     parser.add_argument('--debug', action="store_true")
     args = parser.parse_args()
 
