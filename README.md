@@ -7,7 +7,7 @@
  - [bokeh](https://github.com/bokeh/bokeh): 使用Bokeh进行数据可视化 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=bokeh)
  - [pyecharts](https://github.com/pyecharts/pyecharts): 使用Python创建基于Echarts的图表 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyecharts)
  - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=cutecharts)
- - [plotly](https://github.com/plotly/plotly.py/): 非常流行的Python数据可视化库，可以生成高质量的交互式图表 [**demos**](http://pywebio-charts..demowangweimin.site/?app=plotly)
+ - [plotly](https://github.com/plotly/plotly.py/): 非常流行的Python数据可视化库，可以生成高质量的交互式图表 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=plotly)
 
 ## Charts Snapshot
 ### Bokeh
