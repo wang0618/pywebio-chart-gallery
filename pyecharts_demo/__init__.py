@@ -41,6 +41,7 @@ def show_demo(name):
         # todo 检测open调用，提供文件链接
         put_collapse('查看源码', put_code(code, 'python'))
 
+    scroll_to(position='top')
     clear('loading')
 
 

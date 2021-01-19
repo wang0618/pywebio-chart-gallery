@@ -37,6 +37,11 @@ def show_demo(_, name):
         return
 
     put_markdown('-------')
+    scroll_to('demo', Position.TOP)
+    with use_scope('loading'):
+        put_text('加载中')
+        put_loading()
+
     script = open(path.join(demos_dir, name + '.py')).read()
 
     exec_script = re.sub(r'output_file\(.*?\)', "", script)
@@ -45,7 +50,9 @@ def show_demo(_, name):
     script = re.sub(r'output_file\(.*?\)', "output_notebook(notebook_type='pywebio')", script)
     script = 'import pywebio\nfrom bokeh.io import output_notebook\n' + script
     put_markdown("**源码**\n```python\n%s\n```" % script)
+
     scroll_to('demo', Position.TOP)
+    clear('loading')
 
 
 def get_demos_table(demos):

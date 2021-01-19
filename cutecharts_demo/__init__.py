@@ -29,6 +29,8 @@ def show_demo(name):
     put_html('<a href="https://github.com/wang0618/pywebio-chart-gallery/blob/master'
              '/cutecharts_demo/demos/example_%s.py" target="_blank">源码</a>' % name.lower())
 
+    scroll_to('demo-list', 'top')
+
 
 async def cutecharts():
     put_markdown(r"""## Cutecharts.py
@@ -44,6 +46,7 @@ async def cutecharts():
 
     ## Demos List
     """, strip_indent=4)
+    set_scope('demo-list')
 
     put_buttons(list(all_demos.keys()), onclick=show_demo)
 

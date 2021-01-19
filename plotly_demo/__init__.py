@@ -28,6 +28,10 @@ async def exec_md(md):
 async def show_demo(name, chapter):
     title = all_demos.get(chapter, {}).get(name, name)
     put_markdown("### %s" % title)
+    scroll_to(position='top')
+    with use_scope('loading'):
+        put_text('加载中')
+        put_loading()
 
     chapter_dir = chapter.replace(" ", "-").lower()
     md_file = path.join(demos_dir, chapter_dir, name + '.md')
@@ -35,6 +39,9 @@ async def show_demo(name, chapter):
         return
     md = open(md_file).read()
     await exec_md(md)
+
+    scroll_to(position='top')
+    clear('loading')
 
 
 @use_scope('chapter', clear=True)
