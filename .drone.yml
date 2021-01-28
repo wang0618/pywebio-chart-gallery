@@ -12,8 +12,8 @@ trigger:
 steps:
   - name: clone
     commands:
-      - git config --global http.https://github.com.proxy socks5://127.0.0.1:7891
-      - git config --global https.https://github.com.proxy socks5://127.0.0.1:7891
+      - git config --global http.https://github.com.proxy http://127.0.0.1:7890
+      - git config --global https.https://github.com.proxy http://127.0.0.1:7890
       - git init
       - git remote add origin $DRONE_GIT_HTTP_URL
       - git fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +$DRONE_COMMIT:refs/remotes/origin/$DRONE_BRANCH
