@@ -58,6 +58,7 @@ python3 run.py
 ### 重新构建demo
 
 ```bash
+pip3 install -r requirements.txt -r requirements-dev.txt
 git submodule update --init --recursive --depth=1
 python3 pyecharts_demo/build_demos.py
 python3 plotly_demo/build_demos.py
