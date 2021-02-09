@@ -46,7 +46,12 @@ def show_demo(name):
 
 
 async def pyecharts():
-    put_markdown(r"""## Pyecharts
+    """PyWebIO pyecharts Demo
+
+    在PyWebIO中使用 pyecharts 进行数据可视化示例
+    """
+
+    put_markdown(r"""## pyecharts
 
     [pyecharts](https://github.com/pyecharts/pyecharts) 是一个使用Python创建 [Echarts](https://github.com/ecomfe/echarts) 可视化图表的库。
 

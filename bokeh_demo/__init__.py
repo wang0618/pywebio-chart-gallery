@@ -76,6 +76,10 @@ def get_demos_table(demos):
 
 
 async def bokehs():
+    """PyWebIO Bokeh Demo
+
+    在PyWebIO中使用 Bokeh 进行数据可视化示例
+    """
     put_markdown(r"""## Bokeh
     PyWebIO支持使用 Bokeh 进行数据可视化。只需要在PyWebIO会话开始后调用 `bokeh.io.output_notebook()` 设置PyWebIO环境，之后对 `bokeh.io.show()` 的调用就可以将图表显示在PyWebIO页面上了。
     

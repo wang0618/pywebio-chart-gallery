@@ -33,6 +33,9 @@ def show_demo(name):
 
 
 async def cutecharts():
+    """PyWebIO cutechart Demo
+
+    在PyWebIO中使用 cutechart.py 进行数据可视化示例"""
     put_markdown(r"""## Cutecharts.py
     
     [cutecharts.py](https://github.com/cutecharts/cutecharts.py) 是一个可以创建具有卡通风格的可视化图表的python库。底层使用了 [chart.xkcd](https://github.com/timqian/chart.xkcd) Javascript库。

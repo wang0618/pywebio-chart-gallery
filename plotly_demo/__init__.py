@@ -61,9 +61,12 @@ async def show_chapter(chapter):
 
 
 async def plotly_demo():
-    set_env(title="Plotly Demo")
+    """PyWebIO plotly Demo
 
-    put_markdown(r"""## Plotly
+    在PyWebIO中使用 plotly 进行数据可视化示例
+    """
+
+    put_markdown(r"""## plotly
 
     [plotly.py](https://github.com/plotly/plotly.py) 是一个非常流行的Python数据可视化库，可以生成高质量的交互式图表
 

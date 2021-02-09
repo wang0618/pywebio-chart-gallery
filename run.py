@@ -8,11 +8,13 @@ from plotly_demo import plotly_demo
 from pyecharts_demo import pyecharts
 from pywebio import start_server
 from pywebio.output import put_markdown
-from pywebio.session import set_env
 
 
 async def index():
-    set_env(title="PyWebIO Chart Gallery")
+    """PyWebIO Chart Gallery
+
+    PyWebIO 支持使用第三方库进行数据可视化，本页面展示了在 PyWebIO 中使用plotly、bokeh、pyecharts和cutecharts进行数据可视化的示例
+    """
     readme_file = path.join(path.dirname(__file__), "README.md")
     readme = open(readme_file).read()
 
