@@ -1,16 +1,13 @@
-import os
-import sys
-from os import path
-import logging
-import re
 import json
-from shutil import copyfile
-from collections import OrderedDict
-from pywebio.io_ctrl import output_register_callback
-from pywebio.session import hold, get_info
-from pywebio.output import *
-from bokeh.io import output_notebook
+import re
 from functools import partial
+from os import path
+
+from bokeh.io import output_notebook
+
+from pywebio.io_ctrl import output_register_callback
+from pywebio.output import *
+from pywebio.session import hold, get_info
 
 here_dir = path.dirname(path.abspath(__file__))
 demos_dir = path.join(here_dir, 'demos')
@@ -29,6 +26,7 @@ style = """
 }
 </style>
 """
+
 
 def t(eng, chinese):
     """return English or Chinese text according to the user's browser language"""

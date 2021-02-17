@@ -1,10 +1,8 @@
-import os
 import json
+import os
 from collections import OrderedDict
-from functools import partial
 from os import path
 
-import pywebio
 from pywebio.output import *
 from pywebio.session import hold, get_info
 

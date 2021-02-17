@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
-from pywebio.session import hold, get_info
 from pywebio.output import *
+from pywebio.session import hold, get_info
 from .demos.example_bar import main as bar
 from .demos.example_line import main as line
 from .demos.example_page import main as page
