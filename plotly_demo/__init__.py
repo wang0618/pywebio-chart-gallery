@@ -3,12 +3,17 @@ from functools import partial
 from os import path
 
 from pywebio.output import *
-from pywebio.session import hold, set_env
+from pywebio.session import hold, get_info
 from .inventory import all_demos
 
 here = path.dirname(path.abspath(__file__))
 
 demos_dir = path.join(here, 'demos')
+
+
+def t(eng, chinese):
+    """return English or Chinese text according to the user's browser language"""
+    return chinese if 'zh' in get_info().user_language else eng
 
 
 async def exec_md(md):
@@ -19,7 +24,7 @@ async def exec_md(md):
         elif part.startswith('```python') and 'pywebio' in part:
             code = part[len("```python"):-3].strip()
 
-            put_collapse('查看源码', put_code(code, 'python'))
+            put_collapse(t('Show source code', '查看源码'), put_code(code, 'python'))
         else:
             put_markdown(part)
 
@@ -30,7 +35,7 @@ async def show_demo(name, chapter):
     put_markdown("### %s" % title)
     scroll_to(position='top')
     with use_scope('loading'):
-        put_text('加载中')
+        put_text('Loading....')
         put_loading()
 
     chapter_dir = chapter.replace(" ", "-").lower()
@@ -63,10 +68,28 @@ async def show_chapter(chapter):
 async def plotly_demo():
     """PyWebIO plotly Demo
 
+    Demo of using plotly for data visualization in PyWebIO.
     在PyWebIO中使用 plotly 进行数据可视化示例
     """
 
-    put_markdown(r"""## plotly
+    put_markdown(t(r"""## plotly
+
+    [plotly.py](https://github.com/plotly/plotly.py) is an interactive, open-source, and browser-based graphing library for Python.
+
+    In PyWebIO, you can use the following code to output the plotly chart instance:
+    ```python
+    # fig is plotly chart instance
+    html = fig.to_html(include_plotlyjs="require", full_html=False)
+    pywebio.output.put_html(html)
+    ``` 
+    For details, please refer to the source code of the demo below.
+
+    ## Demos List
+    
+    The following example is modified from the [official plotly document](https://plotly.com/python/)
+    
+    ### Category
+    """, r"""## plotly
 
     [plotly.py](https://github.com/plotly/plotly.py) 是一个非常流行的Python数据可视化库，可以生成高质量的交互式图表
 
@@ -83,7 +106,7 @@ async def plotly_demo():
     以下示例修改自 [plotly官方文档](https://plotly.com/python/)
     
     ### Category
-    """, strip_indent=4)
+    """), strip_indent=4)
 
     put_buttons(list(all_demos.keys()), onclick=show_chapter)
 

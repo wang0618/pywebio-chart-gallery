@@ -1,13 +1,13 @@
 # [PyWebIO Chart Gallery](https://github.com/wang0618/pywebio-chart-gallery)
 
-[PyWebIO](https://github.com/wang0618/PyWebIO) supports for data visualization with the third-party libraries.
+[PyWebIO](https://github.com/wang0618/PyWebIO) 支持使用第三方库进行数据可视化
 
-This repo shows examples of data visualization using plotly, bokeh, pyecharts and cutcharts in PyWebIO
+本项目展示了在 PyWebIO 中使用以下库进行数据可视化：
 
- - [bokeh](https://github.com/bokeh/bokeh): Use bokeh for data visualization. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=bokeh)
- - [plotly](https://github.com/plotly/plotly.py/): Interactive, open-source, and browser-based graphing library. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=plotly)
- - [pyecharts](https://github.com/pyecharts/pyecharts): Create Echarts-based charts in Python. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyecharts)
- - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): Create a hand drawing style charts. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=cutecharts)
+ - [bokeh](https://github.com/bokeh/bokeh): 使用Bokeh进行数据可视化 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=bokeh)
+ - [plotly](https://github.com/plotly/plotly.py/): 非常流行的Python数据可视化库，可以生成高质量的交互式图表 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=plotly)
+ - [pyecharts](https://github.com/pyecharts/pyecharts): 使用Python创建基于Echarts的图表 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyecharts)
+ - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): 创建卡通风格图表 [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=cutecharts)
 
 ## Charts Snapshot
 ### Bokeh
@@ -48,13 +48,13 @@ This repo shows examples of data visualization using plotly, bokeh, pyecharts an
 
 ## Run Demo
 
-### Start demo
+### 启动demo
 
 ```bash
 python3 run.py
 ```
 
-### Rebuild demo
+### 重新构建demo
 
 ```bash
 pip3 install -r requirements.txt -r requirements-dev.txt

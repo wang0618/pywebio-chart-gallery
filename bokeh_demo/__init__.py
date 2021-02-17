@@ -7,7 +7,7 @@ import json
 from shutil import copyfile
 from collections import OrderedDict
 from pywebio.io_ctrl import output_register_callback
-from pywebio.session import hold
+from pywebio.session import hold, get_info
 from pywebio.output import *
 from bokeh.io import output_notebook
 from functools import partial
@@ -30,6 +30,10 @@ style = """
 </style>
 """
 
+def t(eng, chinese):
+    """return English or Chinese text according to the user's browser language"""
+    return chinese if 'zh' in get_info().user_language else eng
+
 
 @use_scope('demo', clear=True)
 def show_demo(_, name):
@@ -39,7 +43,7 @@ def show_demo(_, name):
     put_markdown('-------')
     scroll_to('demo', Position.TOP)
     with use_scope('loading'):
-        put_text('加载中')
+        put_text('Loading...')
         put_loading()
 
     script = open(path.join(demos_dir, name + '.py')).read()
@@ -49,7 +53,7 @@ def show_demo(_, name):
 
     script = re.sub(r'output_file\(.*?\)', "output_notebook(notebook_type='pywebio')", script)
     script = 'import pywebio\nfrom bokeh.io import output_notebook\n' + script
-    put_markdown("**源码**\n```python\n%s\n```" % script)
+    put_markdown("**%s**\n```python\n%s\n```" % (t('Source code', '源码'), script))
 
     scroll_to('demo', Position.TOP)
     clear('loading')
@@ -78,23 +82,34 @@ def get_demos_table(demos):
 async def bokehs():
     """PyWebIO Bokeh Demo
 
-    在PyWebIO中使用 Bokeh 进行数据可视化示例
+    Demo of using bokeh for data visualization in PyWebIO.
+    在PyWebIO中使用 Bokeh 进行数据可视化的示例
     """
-    put_markdown(r"""## Bokeh
-    PyWebIO支持使用 Bokeh 进行数据可视化。只需要在PyWebIO会话开始后调用 `bokeh.io.output_notebook()` 设置PyWebIO环境，之后对 `bokeh.io.show()` 的调用就可以将图表显示在PyWebIO页面上了。
+    put_markdown(t(r"""## Bokeh
+    PyWebIO supports for data visualization with `Bokeh` library.
     
+    You can use `bokeh.io.output_notebook(notebook_type='pywebio')` in the PyWebIO session to setup Bokeh environment. 
+    Then you can use `bokeh.io.show()` to output a boken chart:
+    %s    
+    For details, please refer to the source code of the demo below.
+
+    ## Demos List
+    """, r"""## Bokeh
+    PyWebIO支持使用 Bokeh 进行数据可视化。只需要在PyWebIO会话开始后调用 `bokeh.io.output_notebook()` 设置PyWebIO环境，之后对 `bokeh.io.show()` 的调用就可以将图表显示在PyWebIO页面上了。
+    %s    
+    具体可以参考下面demo中的源码。
+
+    ## Demos List
+    """) % """
     ```python
     from bokeh.io import output_notebook
     from bokeh.io import show
 
     output_notebook(notebook_type='pywebio')
-    fig = ...  # 创建bokeh图表
+    fig = ...  # create bokeh chart
     
     show(fig)
     ``` 
-    具体可以参考下面demo中的源码。
-
-    ## Demos List
     """, strip_indent=4)
 
     put_html(style)

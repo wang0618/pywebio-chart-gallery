@@ -6,20 +6,26 @@ from os import path
 
 import pywebio
 from pywebio.output import *
-from pywebio.session import hold
+from pywebio.session import hold, get_info
 
 src_path = path.join(path.dirname(__file__), "demos")
 
-all_demos = OrderedDict(json.load(open(path.join(path.dirname(__file__), 'inventory.json'))))
+all_demos_zh = OrderedDict(json.load(open(path.join(path.dirname(__file__), 'inventory.json'))))
+all_demos = OrderedDict({i: i for i in all_demos_zh.keys()})
+
+
+def t(eng, chinese):
+    """return English or Chinese according to the user's browser language"""
+    return chinese if 'zh' in get_info().user_language else eng
 
 
 @use_scope('content', clear=True)
 def show_demo(name):
-    if name not in all_demos:
+    if name not in t(all_demos, all_demos_zh):
         return
 
     with use_scope('loading'):
-        put_text('加载中')
+        put_text('Loading...')
         put_loading()
 
     base_dir = path.join(src_path, name)
@@ -38,8 +44,8 @@ def show_demo(name):
 
         put_html(html)
 
-        # todo 检测open调用，提供文件链接
-        put_collapse('查看源码', put_code(code, 'python'))
+        # todo: if there is `open` calls, provide the file link
+        put_collapse(t('Show source code', '查看源码'), put_code(code, 'python'))
 
     scroll_to(position='top')
     clear('loading')
@@ -48,10 +54,24 @@ def show_demo(name):
 async def pyecharts():
     """PyWebIO pyecharts Demo
 
+    Demo of using pyecharts for data visualization in PyWebIO.
     在PyWebIO中使用 pyecharts 进行数据可视化示例
     """
 
-    put_markdown(r"""## pyecharts
+    put_markdown(t(r"""## pyecharts
+
+    [pyecharts](https://github.com/pyecharts/pyecharts) is a python plotting library which uses [Echarts](https://github.com/ecomfe/echarts) as underlying implementation.
+
+    In PyWebIO, you can use the following code to output the pyecharts chart instance:
+
+    ```python
+    # chart is pyecharts chart instance
+    pywebio.output.put_html(chart.render_notebook())
+    ``` 
+    For details, please refer to the source code of the demo below.
+
+    ## Demos List
+    """, r"""## pyecharts
 
     [pyecharts](https://github.com/pyecharts/pyecharts) 是一个使用Python创建 [Echarts](https://github.com/ecomfe/echarts) 可视化图表的库。
 
@@ -63,9 +83,9 @@ async def pyecharts():
     具体可以参考下面demo中的源码。
 
     ## Demos List
-    """, strip_indent=4)
+    """), strip_indent=4)
 
-    put_buttons([(v, k) for k, v in all_demos.items()], onclick=show_demo)
+    put_buttons([(v, k) for k, v in t(all_demos, all_demos_zh).items()], onclick=show_demo)
     put_markdown('----')
     set_scope('content')
     set_scope('loading')
