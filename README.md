@@ -7,6 +7,7 @@ This repo shows examples of data visualization using plotly, bokeh, pyecharts an
  - [bokeh](https://github.com/bokeh/bokeh): Use bokeh for data visualization. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=bokeh)
  - [plotly](https://github.com/plotly/plotly.py/): Interactive, open-source, and browser-based graphing library. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=plotly)
  - [pyecharts](https://github.com/pyecharts/pyecharts): Create Echarts-based charts in Python. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyecharts)
+ - [pyg2plot](https://github.com/hustcc/PyG2Plot): Create G2Plot-based charts in Python. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyg2plot)
  - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): Create a hand drawing style charts. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=cutecharts)
 
 ## Charts Snapshot

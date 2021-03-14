@@ -6,6 +6,7 @@ from bokeh_demo import bokehs
 from cutecharts_demo import cutecharts
 from plotly_demo import plotly_demo
 from pyecharts_demo import pyecharts
+from pyg2plot_demo import pyg2plot
 from pywebio import start_server
 from pywebio.output import put_markdown
 from pywebio.session import get_info
@@ -46,4 +47,5 @@ if __name__ == "__main__":
         'pyecharts': pyecharts,
         'plotly': plotly_demo,
         'bokeh': bokehs,
+        'pyg2plot': pyg2plot,
     }, port=args.port, debug=args.debug)

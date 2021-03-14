@@ -2,6 +2,7 @@ pywebio
 cutecharts
 pyecharts
 plotly==4.6.0
+pyg2plot
 bokeh
 numpy
 pandas
