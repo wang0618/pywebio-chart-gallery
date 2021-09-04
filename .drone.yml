@@ -2,23 +2,11 @@ kind: pipeline
 type: exec
 name: default
 
-clone:
-  disable: true
-
 trigger:
   event:
     - push
 
 steps:
-  - name: clone
-    commands:
-      - git config --global http.https://github.com.proxy http://127.0.0.1:7890
-      - git config --global https.https://github.com.proxy http://127.0.0.1:7890
-      - git init
-      - git remote add origin $DRONE_GIT_HTTP_URL
-      - git fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +$DRONE_COMMIT:refs/remotes/origin/$DRONE_BRANCH
-      - git checkout --progress --force -B $DRONE_BRANCH refs/remotes/origin/$DRONE_BRANCH
-      - git log -1
   - name: build
     commands:
       - docker build -t pywebio-chart .
