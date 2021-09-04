@@ -4,17 +4,17 @@
 
 This repo shows examples of data visualization using plotly, bokeh, pyecharts and cutcharts in PyWebIO
 
- - [bokeh](https://github.com/bokeh/bokeh): Use bokeh for data visualization. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=bokeh)
- - [plotly](https://github.com/plotly/plotly.py/): Interactive, open-source, and browser-based graphing library. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=plotly)
- - [pyecharts](https://github.com/pyecharts/pyecharts): Create Echarts-based charts in Python. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyecharts)
- - [pyg2plot](https://github.com/hustcc/PyG2Plot): Create G2Plot-based charts in Python. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=pyg2plot)
- - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): Create a hand drawing style charts. [**demos**](http://pywebio-charts.demo.wangweimin.site/?app=cutecharts)
+ - [bokeh](https://github.com/bokeh/bokeh): Use bokeh for data visualization. [**demos**](http://pywebio-charts.pywebio.online/?app=bokeh)
+ - [plotly](https://github.com/plotly/plotly.py/): Interactive, open-source, and browser-based graphing library. [**demos**](http://pywebio-charts.pywebio.online/?app=plotly)
+ - [pyecharts](https://github.com/pyecharts/pyecharts): Create Echarts-based charts in Python. [**demos**](http://pywebio-charts.pywebio.online/?app=pyecharts)
+ - [pyg2plot](https://github.com/hustcc/PyG2Plot): Create G2Plot-based charts in Python. [**demos**](http://pywebio-charts.pywebio.online/?app=pyg2plot)
+ - [cutecharts.py](https://github.com/cutecharts/cutecharts.py): Create a hand drawing style charts. [**demos**](http://pywebio-charts.pywebio.online/?app=cutecharts)
 
 ## Charts Snapshot
 ### Bokeh
 
 <p align="center">
-    <a href="http://pywebio-charts.demo.wangweimin.site/?app=bokeh">
+    <a href="http://pywebio-charts.pywebio.online/?app=bokeh">
         <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/bokeh.png" alt="bokeh demo"/>
     </a>
 </p>
@@ -22,7 +22,7 @@ This repo shows examples of data visualization using plotly, bokeh, pyecharts an
 ### Plotly
 
 <p align="center">
-    <a href="http://pywebio-charts.demo.wangweimin.site/?app=plotly">
+    <a href="http://pywebio-charts.pywebio.online/?app=plotly">
         <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/plotly.png" alt="plotly demo"/>
     </a>
 </p>
@@ -30,7 +30,7 @@ This repo shows examples of data visualization using plotly, bokeh, pyecharts an
 ### Pyecharts
 
 <p align="center">
-    <a href="http://pywebio-charts.demo.wangweimin.site/?app=pyecharts">
+    <a href="http://pywebio-charts.pywebio.online/?app=pyecharts">
         <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/pyecharts.gif" alt="pyecharts demo"/>
     </a>
 </p>
@@ -39,7 +39,7 @@ This repo shows examples of data visualization using plotly, bokeh, pyecharts an
 ### Cutecharts.py
 
 <p align="center">
-    <a href="http://pywebio-charts.demo.wangweimin.site/?app=cutecharts">
+    <a href="http://pywebio-charts.pywebio.online/?app=cutecharts">
         <img src="https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master/assets/cutecharts.png" alt="cutecharts demo"/>
     </a>
 </p>
