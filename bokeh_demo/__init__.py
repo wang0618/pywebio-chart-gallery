@@ -60,7 +60,7 @@ def show_demo(_, name):
 def get_demos_table(demos):
     td = """
     <td>
-      <a onclick="javascript:WebIO.pushData('{name}', '{callback_id}')">
+      <a onclick="javascript:WebIO._state.CurrentSession.send_message({{event: 'callback', data:'{name}', task_id:'{callback_id}'}})">
         <img alt="{name}" src="https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master/assets/bokeh/{name}.png" class="bokeh-demo-link"/>
       </a>
     </td>
@@ -92,12 +92,14 @@ async def bokehs():
     For details, please refer to the source code of the demo below.
 
     ## Demos List
+    Click the thumbnail to view demo.
     """, r"""## Bokeh
     PyWebIO支持使用 Bokeh 进行数据可视化。只需要在PyWebIO会话开始后调用 `bokeh.io.output_notebook()` 设置PyWebIO环境，之后对 `bokeh.io.show()` 的调用就可以将图表显示在PyWebIO页面上了。
     %s    
     具体可以参考下面demo中的源码。
 
     ## Demos List
+    点击图片来查看相应示例
     """) % """
     ```python
     from bokeh.io import output_notebook
