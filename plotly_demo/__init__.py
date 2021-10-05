@@ -3,7 +3,7 @@ from functools import partial
 from os import path
 
 from pywebio.output import *
-from pywebio.session import hold, get_info
+from pywebio.session import info as session_info
 from .inventory import all_demos
 
 here = path.dirname(path.abspath(__file__))
@@ -13,7 +13,7 @@ demos_dir = path.join(here, 'demos')
 
 def t(eng, chinese):
     """return English or Chinese text according to the user's browser language"""
-    return chinese if 'zh' in get_info().user_language else eng
+    return chinese if 'zh' in session_info.user_language else eng
 
 
 async def exec_md(md):
@@ -109,5 +109,3 @@ async def plotly_demo():
     """), strip_indent=4)
 
     put_buttons(list(all_demos.keys()), onclick=show_chapter)
-
-    await hold()

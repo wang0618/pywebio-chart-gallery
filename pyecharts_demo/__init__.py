@@ -4,7 +4,7 @@ from collections import OrderedDict
 from os import path
 
 from pywebio.output import *
-from pywebio.session import hold, get_info
+from pywebio.session import info as session_info
 
 src_path = path.join(path.dirname(__file__), "demos")
 
@@ -14,7 +14,7 @@ all_demos = OrderedDict({i: i for i in all_demos_zh.keys()})
 
 def t(eng, chinese):
     """return English or Chinese according to the user's browser language"""
-    return chinese if 'zh' in get_info().user_language else eng
+    return chinese if 'zh' in session_info.user_language else eng
 
 
 @use_scope('content', clear=True)
@@ -87,5 +87,3 @@ async def pyecharts():
     put_markdown('----')
     set_scope('content')
     set_scope('loading')
-
-    await hold()

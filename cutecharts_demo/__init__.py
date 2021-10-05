@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
 from pywebio.output import *
-from pywebio.session import hold, get_info
+from pywebio.session import info as session_info
 from .demos.example_bar import main as bar
 from .demos.example_line import main as line
 from .demos.example_page import main as page
@@ -21,7 +21,7 @@ all_demos = OrderedDict([
 
 def t(eng, chinese):
     """return English or Chinese text according to the user's browser language"""
-    return chinese if 'zh' in get_info().user_language else eng
+    return chinese if 'zh' in session_info.user_language else eng
 
 
 @use_scope('demo', clear=True)
@@ -72,5 +72,3 @@ async def cutecharts():
     set_scope('demo-list')
 
     put_buttons(list(all_demos.keys()), onclick=show_demo)
-
-    await hold()

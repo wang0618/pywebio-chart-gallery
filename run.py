@@ -9,7 +9,7 @@ from pyecharts_demo import pyecharts
 from pyg2plot_demo import pyg2plot
 from pywebio import start_server
 from pywebio.output import put_markdown
-from pywebio.session import get_info
+from pywebio.session import info as session_info
 
 readme_file = path.join(path.dirname(__file__), "README.md")
 readme_zh_file = path.join(path.dirname(__file__), "README_zh.md")
@@ -25,7 +25,7 @@ async def index():
     """
     global readme, readme_zh
 
-    md = readme_zh if 'zh' in get_info().user_language else readme
+    md = readme_zh if 'zh' in session_info.user_language else readme
     md = re.sub(r"\[\*\*demos\*\*\]\(.*?\?app=(.+?)\)", r"[**demos**](./?app=\g<1>)", md)
     cdn = r"https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery"
     github_url = r"https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master"

@@ -5,9 +5,9 @@ from os import path
 
 from bokeh.io import output_notebook
 
-from pywebio.io_ctrl import output_register_callback
+from pywebio import config
 from pywebio.output import *
-from pywebio.session import hold, get_info
+from pywebio.session import info as session_info
 
 here_dir = path.dirname(path.abspath(__file__))
 demos_dir = path.join(here_dir, 'demos')
@@ -17,24 +17,22 @@ demos = json.load(open(path.join(here_dir, 'inventory.json')))
 demo_set = set(demos)
 
 style = """
-<style>
 .bokeh-demo-link:hover {
     transition-duration: 400ms;
     transform: translateY(-2px);
     -webkit-box-shadow: 0 50px 80px -20px rgba(0, 0, 0, .27), 0 30px 50px -30px rgba(0, 0, 0, .3);
     box-shadow: 0 50px 80px -20px rgba(0, 0, 0, .27), 0 30px 50px -30px rgba(0, 0, 0, .3);
 }
-</style>
 """
 
 
 def t(eng, chinese):
     """return English or Chinese text according to the user's browser language"""
-    return chinese if 'zh' in get_info().user_language else eng
+    return chinese if 'zh' in session_info.user_language else eng
 
 
 @use_scope('demo', clear=True)
-def show_demo(_, name):
+def show_demo(name):
     if name not in demo_set:
         return
 
@@ -58,25 +56,17 @@ def show_demo(_, name):
 
 
 def get_demos_table(demos):
-    td = """
-    <td>
-      <a onclick="javascript:WebIO._state.CurrentSession.send_message({{event: 'callback', data:'{name}', task_id:'{callback_id}'}})">
-        <img alt="{name}" src="https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master/assets/bokeh/{name}.png" class="bokeh-demo-link"/>
-      </a>
-    </td>
-    """
-    tds = []
+    images = []
+    img_tpl = '<img alt="{name}" src="https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master/assets/bokeh/{name}.png" class="bokeh-demo-link"/>'
     for demo in demos:
-        callback_id = output_register_callback(partial(show_demo, name=demo))
-        tds.append(td.format(name=demo, callback_id=callback_id))
+        img = put_html(img_tpl.format(name=demo)).onclick(partial(show_demo, name=demo))
+        images.append(img)
     col = 7
-    rows = ['\n'.join(tds[i * col:i * col + col]) for i in range((len(tds) + col - 1) // col)]
-    table = '\n'.join("<tr>%s</tr>" % row for row in rows)
-    table = "<table>%s</table>" % table
-
+    table = [images[i * col:i * col + col] for i in range((len(images) + col - 1) // col)]
     return table
 
 
+@config(css_style=style)
 async def bokehs():
     """PyWebIO Bokeh Demo
 
@@ -116,6 +106,4 @@ async def bokehs():
 
     output_notebook(verbose=False, notebook_type='pywebio')
 
-    put_html(get_demos_table(demos))
-
-    await hold()
+    put_table(get_demos_table(demos))
