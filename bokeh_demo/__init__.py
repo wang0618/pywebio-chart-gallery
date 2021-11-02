@@ -102,8 +102,6 @@ async def bokehs():
     ``` 
     """, strip_indent=4)
 
-    put_html(style)
-
     output_notebook(verbose=False, notebook_type='pywebio')
 
     put_table(get_demos_table(demos))
