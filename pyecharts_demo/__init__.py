@@ -60,7 +60,7 @@ async def pyecharts():
 
     [pyecharts](https://github.com/pyecharts/pyecharts) is a python plotting library which uses [Echarts](https://github.com/ecomfe/echarts) as underlying implementation.
 
-    In PyWebIO, you can use the following code to output the pyecharts chart instance:
+    With [PyWebIO](https://github.com/wang0618/PyWebIO), you can use the following code to output the pyecharts chart instance:
 
     ```python
     # chart is pyecharts chart instance
@@ -73,7 +73,7 @@ async def pyecharts():
 
     [pyecharts](https://github.com/pyecharts/pyecharts) 是一个使用Python创建 [Echarts](https://github.com/ecomfe/echarts) 可视化图表的库。
 
-    PyWebIO 支持输出使用 pyecharts 库创建的图表。使用方式为在PyWebIO会话中调用：
+    [PyWebIO](https://github.com/wang0618/PyWebIO) 支持输出使用 pyecharts 库创建的图表。使用方式为在PyWebIO会话中调用：
     ```python
     # chart 为 pyecharts 的图表实例
     pywebio.output.put_html(chart.render_notebook())

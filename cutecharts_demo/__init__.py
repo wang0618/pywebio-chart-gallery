@@ -47,7 +47,7 @@ async def cutecharts():
     
     [cutecharts.py](https://github.com/cutecharts/cutecharts.py) is a hand drawing style charts library for Python which uses [chart.xkcd](https://github.com/timqian/chart.xkcd) as underlying implementation.
 
-    In PyWebIO, you can use the following code to output the cutecharts.py chart instance:
+    With [PyWebIO](https://github.com/wang0618/PyWebIO), you can use the following code to output the cutecharts.py chart instance:
 
     ```python
     # `chart` is cutecharts chart instance
@@ -60,7 +60,7 @@ async def cutecharts():
     
     [cutecharts.py](https://github.com/cutecharts/cutecharts.py) 是一个可以创建具有卡通风格的可视化图表的python库。底层使用了 [chart.xkcd](https://github.com/timqian/chart.xkcd) Javascript库。
     
-    PyWebIO 支持输出使用 cutecharts.py 库创建的图表。使用方式为在PyWebIO会话中调用 
+    [PyWebIO](https://github.com/wang0618/PyWebIO) 支持输出使用 cutecharts.py 库创建的图表。使用方式为在PyWebIO会话中调用 
     ```python
     # chart 为 cutecharts 的图表实例
     pywebio.output.put_html(chart.render_notebook())

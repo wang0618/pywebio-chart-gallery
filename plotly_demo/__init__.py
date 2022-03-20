@@ -76,7 +76,7 @@ async def plotly_demo():
 
     [plotly.py](https://github.com/plotly/plotly.py) is an interactive, open-source, and browser-based graphing library for Python.
 
-    In PyWebIO, you can use the following code to output the plotly chart instance:
+    With [PyWebIO](https://github.com/wang0618/PyWebIO), you can use the following code to output the plotly chart instance:
     ```python
     # fig is plotly chart instance
     html = fig.to_html(include_plotlyjs="require", full_html=False)
@@ -93,7 +93,7 @@ async def plotly_demo():
 
     [plotly.py](https://github.com/plotly/plotly.py) 是一个非常流行的Python数据可视化库，可以生成高质量的交互式图表
 
-    PyWebIO 支持输出使用 plotly 库创建的图表。使用方式为在PyWebIO会话中调用 
+    [PyWebIO](https://github.com/wang0618/PyWebIO) 支持输出使用 plotly 库创建的图表。使用方式为在PyWebIO会话中调用 
     ```python
     # fig 为 plotly 的图表实例
     html = fig.to_html(include_plotlyjs="require", full_html=False)

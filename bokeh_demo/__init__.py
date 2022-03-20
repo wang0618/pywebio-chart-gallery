@@ -74,7 +74,7 @@ async def bokehs():
     在PyWebIO中使用 Bokeh 进行数据可视化的示例
     """
     put_markdown(t(r"""## Bokeh
-    PyWebIO supports for data visualization with `Bokeh` library.
+    [PyWebIO](https://github.com/wang0618/PyWebIO) supports for data visualization with `Bokeh` library.
     
     You can use `bokeh.io.output_notebook(notebook_type='pywebio')` in the PyWebIO session to setup Bokeh environment. 
     Then you can use `bokeh.io.show()` to output a boken chart:
@@ -84,7 +84,7 @@ async def bokehs():
     ## Demos List
     Click the thumbnail to view demo.
     """, r"""## Bokeh
-    PyWebIO支持使用 Bokeh 进行数据可视化。只需要在PyWebIO会话开始后调用 `bokeh.io.output_notebook()` 设置PyWebIO环境，之后对 `bokeh.io.show()` 的调用就可以将图表显示在PyWebIO页面上了。
+    [PyWebIO](https://github.com/wang0618/PyWebIO) 支持使用 Bokeh 进行数据可视化。只需要在PyWebIO会话开始后调用 `bokeh.io.output_notebook()` 设置PyWebIO环境，之后对 `bokeh.io.show()` 的调用就可以将图表显示在PyWebIO页面上了。
     %s    
     具体可以参考下面demo中的源码。
 

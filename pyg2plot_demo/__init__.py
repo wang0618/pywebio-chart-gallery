@@ -40,7 +40,7 @@ async def pyg2plot():
     
     [pyg2plot](https://github.com/hustcc/PyG2Plot) is a python plotting library which uses [G2Plot](https://github.com/antvis/G2Plot) as underlying implementation.
 
-    In PyWebIO, you can use the following code to output the pyg2plot chart instance:
+    With [PyWebIO](https://github.com/wang0618/PyWebIO), you can use the following code to output the pyg2plot chart instance:
 
     ```python
     # `chart` is pyg2plot chart instance
@@ -53,7 +53,7 @@ async def pyg2plot():
     
     [pyg2plot](https://github.com/hustcc/PyG2Plot) 是一个使用Python创建 [G2Plot](https://github.com/antvis/G2Plot) 可视化图表的库。
     
-    PyWebIO 支持输出使用 pyg2plot 库创建的图表。使用方式为在PyWebIO会话中调用 
+    [PyWebIO](https://github.com/wang0618/PyWebIO) 支持输出使用 pyg2plot 库创建的图表。使用方式为在PyWebIO会话中调用 
     ```python
     # chart 为 pyg2plot 的图表实例
     pywebio.output.put_html(chart.render_notebook())
