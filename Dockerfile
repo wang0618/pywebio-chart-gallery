@@ -12,6 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt \
     && mv ~/.bokeh/bokeh_* ~/.bokeh/data \
     && rm /bokeh_sampledata.zip
 
+RUN pip freeze
+
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
 
