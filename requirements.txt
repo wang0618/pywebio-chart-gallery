@@ -1,3 +1,4 @@
+markupsafe==2.0.1  # fix cannot import name 'soft_unicode' from 'markupsafe' error. see: https://github.com/aws/aws-sam-cli/issues/3661
 pywebio
 cutecharts
 pyecharts
