@@ -27,7 +27,7 @@ async def index():
 
     md = readme_zh if 'zh' in session_info.user_language else readme
     md = re.sub(r"\[\*\*demos\*\*\]\(.*?\?app=(.+?)\)", r"[**demos**](./?app=\g<1>)", md)
-    cdn = r"https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery"
+    cdn = r"https://fastly.jsdelivr.net/gh/wang0618/pywebio-chart-gallery"
     github_url = r"https://raw.githubusercontent.com/wang0618/pywebio-chart-gallery/master"
     md = md.replace(github_url, cdn)
     md = re.sub(r"<div></div>[\s\S]*$", "", md)

@@ -57,7 +57,7 @@ def show_demo(name):
 
 def get_demos_table(demos):
     images = []
-    img_tpl = '<img alt="{name}" src="https://cdn.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master/assets/bokeh/{name}.png" class="bokeh-demo-link"/>'
+    img_tpl = '<img alt="{name}" src="https://fastly.jsdelivr.net/gh/wang0618/pywebio-chart-gallery@master/assets/bokeh/{name}.png" class="bokeh-demo-link"/>'
     for demo in demos:
         img = put_html(img_tpl.format(name=demo)).onclick(partial(show_demo, name=demo))
         images.append(img)

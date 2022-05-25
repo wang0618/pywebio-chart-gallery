@@ -19,7 +19,7 @@ from pyecharts.charts import Page, Tab
 from collections import Iterable
 from pyecharts.globals import CurrentConfig
 
-CurrentConfig.ONLINE_HOST = "https://cdn.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/"
+CurrentConfig.ONLINE_HOST = "https://fastly.jsdelivr.net/gh/pyecharts/pyecharts-assets@master/assets/"
 
 
 def render(self, path: str = "render.html", template_name: str = "simple_chart.html", *args, **kwargs):
