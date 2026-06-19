@@ -67,7 +67,7 @@ def get_demos_table(demos):
 
 
 @config(css_style=style)
-async def bokehs():
+def bokehs():
     """PyWebIO Bokeh Demo
 
     Demo of using bokeh for data visualization in PyWebIO.
